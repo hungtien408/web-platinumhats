@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "platinumhats_source", "platinumhats_source\", "{F45E1667-9B94-4484-A543-67154B9D1E66}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		Debug.AspNetCompiler.VirtualPath = "/platinumhats_source"
+		Debug.AspNetCompiler.PhysicalPath = "platinumhats_source\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\platinumhats_source\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/platinumhats_source"
+		Release.AspNetCompiler.PhysicalPath = "platinumhats_source\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\platinumhats_source\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1550"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F45E1667-9B94-4484-A543-67154B9D1E66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F45E1667-9B94-4484-A543-67154B9D1E66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/site.master" AutoEventWireup="true" CodeFile="site-sub.master.cs"
+    Inherits="site_sub" %>
+
+<%@ Register TagPrefix="asp" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit, Version=3.5.40412.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphContact" runat="Server">
+    <div class="wrap-contactus">
+        <div class="container">
+            <div class="contactus-form">
+                <h4 class="text-uppercase title-1">
+                    CONTACT US</h4>
+                <div class="contactus-content">
+                    <div class="contactus-input">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <asp:TextBox ID="txtFullName" CssClass="contactus-text" runat="server"></asp:TextBox>
+                                <asp:TextBoxWatermarkExtender ID="txtFullName_WatermarkExtender" runat="server" Enabled="True"
+                                    WatermarkText="Fullname..." TargetControlID="txtFullName">
+                                </asp:TextBoxWatermarkExtender>
+                                <asp:RequiredFieldValidator CssClass="lb-error" ID="RequiredFieldValidator1" runat="server"
+                                    Display="Dynamic" ValidationGroup="SendEmail" ControlToValidate="txtFullName"
+                                    ErrorMessage="Information required!" ForeColor="Red"></asp:RequiredFieldValidator>
+                            </div>
+                            <div class="col-xs-6">
+                                <asp:TextBox ID="txtEmail" CssClass="contactus-text mtm16" runat="server"></asp:TextBox>
+                                <asp:TextBoxWatermarkExtender ID="txtEmail_WatermarkExtender" runat="server" Enabled="True"
+                                    WatermarkText="Email..." TargetControlID="txtEmail">
+                                </asp:TextBoxWatermarkExtender>
+                                <asp:RegularExpressionValidator CssClass="lb-error" ID="RegularExpressionValidator1"
+                                    runat="server" ValidationGroup="SendEmail" ControlToValidate="txtEmail" ErrorMessage="Email is error!"
+                                    ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic"
+                                    ForeColor="Red"></asp:RegularExpressionValidator>
+                                <asp:RequiredFieldValidator CssClass="lb-error" ID="RequiredFieldValidator2" runat="server"
+                                    ValidationGroup="SendEmail" ControlToValidate="txtEmail" ErrorMessage="Information required!"
+                                    Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contactus-input">
+                        <asp:TextBox ID="txtContent" CssClass="contactus-area" runat="server"></asp:TextBox>
+                        <asp:TextBoxWatermarkExtender ID="txtContent_WatermarkExtender" runat="server" Enabled="True"
+                            WatermarkText="Message..." TargetControlID="txtContent">
+                        </asp:TextBoxWatermarkExtender>
+                        <asp:RequiredFieldValidator CssClass="lb-error" ID="RequiredFieldValidator3" runat="server"
+                            ValidationGroup="SendEmail" Display="Dynamic" ControlToValidate="txtContent"
+                            ErrorMessage="Information required!" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </div>
+                </div>
+                <div class="contactus-btn">
+                    <asp:Button ID="btnSend" CssClass="button-btn" runat="server" Text="SEND" ValidationGroup="SendEmail" OnClick="btSend_Click" />
+                </div>
+            </div>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="cphMenuMobile" runat="Server">
+    <asp:ContentPlaceHolder ID="cphMenuMobile" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="cphPopup" runat="Server">
+    <asp:ContentPlaceHolder ID="cphPopup" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
