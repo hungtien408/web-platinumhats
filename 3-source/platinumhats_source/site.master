@@ -80,6 +80,46 @@
                     <ul id="menu" class="desktop-992">
                         <li class="active"><a href="~/" runat="server">HOME<span class="menubg"></span></a>
                         </li>
+                        <li><a href="javascript:void(0);">ABOUT US<span class="menubg"></span><span class="arrow-up"></span></a>
+                            <div class="menu-sub">
+                                <div class="menu-subin">
+                                    <asp:ListView ID="lstAbout" runat="server" DataSourceID="odsAbout" EnableModelValidation="True">
+                                        <ItemTemplate>
+                                            <li><a href='<%# progressTitle(Eval("ArticleTitle")) + "-gt-" + Eval("ArticleID") + ".aspx" %>'>
+                                                <span class="menu-box"><span class="iconai">
+                                                    <img id="Img1" alt='<%# Eval("IconName") %>' src='<%# !string.IsNullOrEmpty(Eval("IconName").ToString()) ? "~/res/article/icon/" + Eval("IconName") : "~/assets/images/icon-m-4.png" %>'
+                                                        runat="server" /></span><%# Eval("ArticleTitle") %></span><span class="menubg"></span></a>
+                                            </li>
+                                        </ItemTemplate>
+                                        <LayoutTemplate>
+                                            <ul>
+                                                <li runat="server" id="itemPlaceholder"></li>
+                                            </ul>
+                                        </LayoutTemplate>
+                                    </asp:ListView>
+                                    <asp:ObjectDataSource ID="odsAbout" runat="server" SelectMethod="ArticleSelectAll"
+                                        TypeName="TLLib.Article">
+                                        <SelectParameters>
+                                            <asp:Parameter Name="StartRowIndex" Type="String" />
+                                            <asp:Parameter Name="EndRowIndex" Type="String" />
+                                            <asp:Parameter Name="Keyword" Type="String" />
+                                            <asp:Parameter Name="ArticleTitle" Type="String" />
+                                            <asp:Parameter Name="Description" Type="String" />
+                                            <asp:Parameter DefaultValue="1" Name="ArticleCategoryID" Type="String" />
+                                            <asp:Parameter Name="Tag" Type="String" />
+                                            <asp:Parameter Name="IsShowOnHomePage" Type="String" />
+                                            <asp:Parameter Name="IsHot" Type="String" />
+                                            <asp:Parameter Name="IsNew" Type="String" />
+                                            <asp:Parameter Name="FromDate" Type="String" />
+                                            <asp:Parameter Name="ToDate" Type="String" />
+                                            <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
+                                            <asp:Parameter Name="Priority" Type="String" />
+                                            <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+                                        </SelectParameters>
+                                    </asp:ObjectDataSource>
+                                </div>
+                            </div>
+                        </li>
                         <li><a href="javascript:void(0);">Custom Program<span class="menubg"></span><span
                             class="arrow-up"></span></a>
                             <div class="menu-sub">
@@ -107,46 +147,6 @@
                                             <asp:Parameter Name="ArticleTitle" Type="String" />
                                             <asp:Parameter Name="Description" Type="String" />
                                             <asp:Parameter DefaultValue="7" Name="ArticleCategoryID" Type="String" />
-                                            <asp:Parameter Name="Tag" Type="String" />
-                                            <asp:Parameter Name="IsShowOnHomePage" Type="String" />
-                                            <asp:Parameter Name="IsHot" Type="String" />
-                                            <asp:Parameter Name="IsNew" Type="String" />
-                                            <asp:Parameter Name="FromDate" Type="String" />
-                                            <asp:Parameter Name="ToDate" Type="String" />
-                                            <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
-                                            <asp:Parameter Name="Priority" Type="String" />
-                                            <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
-                                        </SelectParameters>
-                                    </asp:ObjectDataSource>
-                                </div>
-                            </div>
-                        </li>
-                        <li><a href="javascript:void(0);">ABOUT US<span class="menubg"></span><span class="arrow-up"></span></a>
-                            <div class="menu-sub">
-                                <div class="menu-subin">
-                                    <asp:ListView ID="lstAbout" runat="server" DataSourceID="odsAbout" EnableModelValidation="True">
-                                        <ItemTemplate>
-                                            <li><a href='<%# progressTitle(Eval("ArticleTitle")) + "-gt-" + Eval("ArticleID") + ".aspx" %>'>
-                                                <span class="menu-box"><span class="iconai">
-                                                    <img alt='<%# Eval("IconName") %>' src='<%# !string.IsNullOrEmpty(Eval("IconName").ToString()) ? "~/res/article/icon/" + Eval("IconName") : "~/assets/images/icon-m-4.png" %>'
-                                                        runat="server" /></span><%# Eval("ArticleTitle") %></span><span class="menubg"></span></a>
-                                            </li>
-                                        </ItemTemplate>
-                                        <LayoutTemplate>
-                                            <ul>
-                                                <li runat="server" id="itemPlaceholder"></li>
-                                            </ul>
-                                        </LayoutTemplate>
-                                    </asp:ListView>
-                                    <asp:ObjectDataSource ID="odsAbout" runat="server" SelectMethod="ArticleSelectAll"
-                                        TypeName="TLLib.Article">
-                                        <SelectParameters>
-                                            <asp:Parameter Name="StartRowIndex" Type="String" />
-                                            <asp:Parameter Name="EndRowIndex" Type="String" />
-                                            <asp:Parameter Name="Keyword" Type="String" />
-                                            <asp:Parameter Name="ArticleTitle" Type="String" />
-                                            <asp:Parameter Name="Description" Type="String" />
-                                            <asp:Parameter DefaultValue="1" Name="ArticleCategoryID" Type="String" />
                                             <asp:Parameter Name="Tag" Type="String" />
                                             <asp:Parameter Name="IsShowOnHomePage" Type="String" />
                                             <asp:Parameter Name="IsHot" Type="String" />
@@ -239,17 +239,47 @@
                             <a id="A1" href="~/" runat="server">
                                 <img src="assets/images/logo2.png" alt="logo" /></a></div>
                         <ul class="list-address">
-                            <li><span class="iconal glyphicon glyphicon-map-marker"></span>111 Ten Lua, Binh Tri
-                                Dong B Ward, Tan Binh Distris, HCMC </li>
-                            <li><span class="iconal glyphicon glyphicon-phone-alt"></span>+84 ( 08) 1234 5678</li>
-                            <li><span class="iconal fa fa-envelope"></span><a href="mailto:chanpin89@gmail.com">
-                                chanpin89@gmail.com</a></li>
+                            <asp:ListView ID="lstFooter" runat="server" DataSourceID="odsFooter" EnableModelValidation="True">
+                                <ItemTemplate>
+                                    <li><span class="iconal glyphicon glyphicon-map-marker"></span>
+                                        <%# Eval("Tag") %>
+                                    </li>
+                                    <li><span class="iconal glyphicon glyphicon-phone-alt"></span>
+                                        <%# Eval("MetaTittle") %></li>
+                                    <li><span class="iconal fa fa-envelope"></span><a href='<%# "mailto:" + Eval("MetaDescription")%>'>
+                                        <%# Eval("MetaDescription")%></a></li>
+                                </ItemTemplate>
+                                <LayoutTemplate>
+                                    <span runat="server" id="itemPlaceholder" />
+                                </LayoutTemplate>
+                            </asp:ListView>
+                            <asp:ObjectDataSource ID="odsFooter" runat="server" SelectMethod="ArticleSelectAll"
+                                TypeName="TLLib.Article">
+                                <SelectParameters>
+                                    <asp:Parameter DefaultValue="1" Name="StartRowIndex" Type="String" />
+                                    <asp:Parameter DefaultValue="1" Name="EndRowIndex" Type="String" />
+                                    <asp:Parameter Name="Keyword" Type="String" />
+                                    <asp:Parameter Name="ArticleTitle" Type="String" />
+                                    <asp:Parameter Name="Description" Type="String" />
+                                    <asp:Parameter DefaultValue="8" Name="ArticleCategoryID" Type="String" />
+                                    <asp:Parameter Name="Tag" Type="String" />
+                                    <asp:Parameter Name="IsShowOnHomePage" Type="String" />
+                                    <asp:Parameter Name="IsHot" Type="String" />
+                                    <asp:Parameter Name="IsNew" Type="String" />
+                                    <asp:Parameter Name="FromDate" Type="String" />
+                                    <asp:Parameter Name="ToDate" Type="String" />
+                                    <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
+                                    <asp:Parameter Name="Priority" Type="String" />
+                                    <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+                                </SelectParameters>
+                            </asp:ObjectDataSource>
                         </ul>
                     </div>
                     <div class="col-md-5 footer-right">
                         <div class="menu-footer">
-                            <a class="first" href="~/" runat="server">Home</a>|<a href="company-gt-26.aspx">About Us</a>|<a
-                                href="product.aspx">Products</a>|<a href="news.aspx">New</a>|<a class="last" href="contact.aspx">Contact</a>
+                            <a class="first" href="~/" runat="server">Home</a>|<a href="company-gt-26.aspx">About
+                                Us</a>|<a href="product.aspx">Products</a>|<a href="news.aspx">New</a>|<a class="last"
+                                    href="contact.aspx">Contact</a>
                         </div>
                         <div class="copyright">
                             Platinum hats &copy; 2016 All rights reserved.<br />
