@@ -11,7 +11,7 @@
     </asp:ContentPlaceHolder>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContact" runat="Server">
-    <div class="wrap-contactus">
+    <%--<div class="wrap-contactus">
         <div class="container">
             <div class="contactus-form">
                 <h4 class="text-uppercase title-1">
@@ -58,7 +58,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>--%>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="cphMenuMobile" runat="Server">
     <asp:ContentPlaceHolder ID="cphMenuMobile" runat="server">

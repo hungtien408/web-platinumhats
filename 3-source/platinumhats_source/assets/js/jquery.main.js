@@ -290,6 +290,7 @@ function myListTb() {
 }
 /*===============================*/
 function myfunsroll() {
+    menusroll();
     mysroll();
     $("#sroltop a").click(function () {
         $("html, body").stop(true, true).animate({ scrollTop: 0 }, 500);
@@ -308,6 +309,20 @@ function mysrol() {
         $("#sroltop").stop(true, true).animate({ "opacity": 1 }, 500);
     } else {
         $("#sroltop").stop(true, true).animate({ "opacity": 0 }, 500);
+    }
+} 
+function menusroll() {
+    var htop = $("#header").height();
+    srollmenu(htop);
+    $(window).scroll(function () {
+        srollmenu(htop);
+    });
+}
+function srollmenu(htop) {
+    if ($(window).scrollTop() > htop) {
+        $("#header").addClass("header-sroll");
+    } else {
+        $("#header").removeClass("header-sroll");
     }
 }
 //==================

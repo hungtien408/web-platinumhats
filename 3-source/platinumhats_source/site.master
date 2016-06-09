@@ -78,9 +78,9 @@
                     <a class="panel-a menu-mo ipadmo-992" href="#menumobile" data-position="true" data-type="false">
                         <span class="fa fa-reorder"></span>Menu</a>
                     <ul id="menu" class="desktop-992">
-                        <li class="active"><a href="~/" runat="server">HOME<span class="menubg"></span></a>
+                        <li class="active"><a href="~/" runat="server">Home<span class="menubg"></span></a>
                         </li>
-                        <li><a href="javascript:void(0);">ABOUT US<span class="menubg"></span><span class="arrow-up"></span></a>
+                        <li><a href="javascript:void(0);">About us<span class="menubg"></span><span class="arrow-up"></span></a>
                             <div class="menu-sub">
                                 <div class="menu-subin">
                                     <asp:ListView ID="lstAbout" runat="server" DataSourceID="odsAbout" EnableModelValidation="True">
@@ -161,9 +161,9 @@
                                 </div>
                             </div>
                         </li>
-                        <li><a href="product.aspx">PRODUCTS<span class="menubg"></span></a></li>
-                        <li><a href="news.aspx">NEWS<span class="menubg"></span></a></li>
-                        <li><a href="contact.aspx">CONTACT<span class="menubg"></span></a></li>
+                        <li><a href="product.aspx">Products<span class="menubg"></span></a></li>
+                        <li><a href="news.aspx">News<span class="menubg"></span></a></li>
+                        <li><a href="contact.aspx">Contact<span class="menubg"></span></a></li>
                     </ul>
                     <div class="header-right">
                         <div class="wrapper-search">
@@ -329,7 +329,7 @@
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/jquery.fancybox.pack.js"></script>
     <script src="assets/js/jquery.sticky.js"></script>
-    <script src="assets/js/jquery.main.min.js"></script>
+    <script src="assets/js/jquery.main.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
         });

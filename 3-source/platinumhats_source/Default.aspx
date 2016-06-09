@@ -47,7 +47,7 @@
                                     runat="server" /></a>
                             <div class="about-contents">
                                 <h4 class="about-name">
-                                    <a class="text-uppercase" href="#">
+                                    <a href='<%# progressTitle(Eval("ArticleTitle")) + "-tci-" + Eval("ArticleCategoryID") + "-tt-" + Eval("ArticleID") + ".aspx" %>'>
                                         <%# TLLib.Common.SplitSummary(Eval("ArticleTitle").ToString(), 20)%></a></h4>
                                 <div class="description">
                                     <%# TLLib.Common.SplitSummary(Eval("Description").ToString(), 260) %></div>
