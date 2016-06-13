@@ -1,11 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site-sub.master" AutoEventWireup="true"
-    CodeFile="product.aspx.cs" Inherits="product" %>
+    CodeFile="product2.aspx.cs" Inherits="product" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <%--<title>Platinum Hats</title>
     <meta name="description" content="Platinum Hats" />--%>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <asp:HiddenField ID="hdnProducts" runat="server" />
+    <a class="a-link-pro" href="<%= hdnProducts.Value %>"></a>
     <div id="main-in">
         <div class="container">
             <div class="head head-lineb">
@@ -36,7 +38,7 @@
                 <asp:ObjectDataSource ID="odsProductCategory" runat="server" SelectMethod="ProductCategorySelectAll"
                     TypeName="TLLib.ProductCategory">
                     <SelectParameters>
-                        <asp:Parameter DefaultValue="9" Name="parentID" Type="Int32" />
+                        <asp:Parameter DefaultValue="0" Name="parentID" Type="Int32" />
                         <asp:Parameter DefaultValue="1" Name="increaseLevelCount" Type="Int32" />
                         <asp:Parameter DefaultValue="" Name="IsShowOnMenu" Type="String" />
                         <asp:Parameter DefaultValue="True" Name="IsShowOnHomePage" Type="String" />
@@ -50,13 +52,16 @@
                             <ItemTemplate>
                                 <div class="col-xs-4 element-item">
                                     <div class="product-box text-center">
-                                        <a class="product-img box-img fancybox fancybox.iframe" href='<%# progressTitle(Eval("ProductName"))  +"-gl-" + Eval("ProductID") + ".aspx" %>'>
-                                            <img src='<%# "~/res/product/" + Eval("ImageName") %>' visible='<%# string.IsNullOrEmpty( Eval("ImageName").ToString()) ? false : true %>' runat="server" alt="" />
-                                            <span class="mask-img"></span>
-                                        </a>
+                                        <a href="javascitp:void(0);" class="product-img box-img fullbox-img contain-img">
+                                            <img class="hideo" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/product/" + Eval("ImageName") : "~/assets/images/product-img-1.jpg" %>'
+                                                runat="server" />
+                                            <span class="mask-img"></span></a>
                                         <h4 class="product-name">
-                                            <a class="fancybox fancybox.iframe" href='<%# progressTitle(Eval("ProductName"))  +"-gl-" + Eval("ProductID") + ".aspx" %>'>
-                                                <%# Eval("ProductName")%></a></h4>
+                                            <a href="javascitp:void(0);">
+                                                <%# Eval("ProductName") %></a></h4>
+                                        <a href='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/product/" + Eval("ImageName") : "~/assets/images/product-img-1.jpg" %>'
+                                            class="fancybox link-mask" data-fancybox-group="gallery" runat="server">
+                                            <%# Eval("ProductName") %></a>
                                     </div>
                                 </div>
                             </ItemTemplate>
@@ -78,7 +83,7 @@
                                 <asp:Parameter Name="Description" Type="String" />
                                 <asp:Parameter Name="PriceFrom" Type="String" />
                                 <asp:Parameter Name="PriceTo" Type="String" />
-                                <asp:QueryStringParameter DefaultValue="9" Name="CategoryID" QueryStringField="pci" Type="String" />
+                                <asp:QueryStringParameter Name="CategoryID" QueryStringField="pci" Type="String" />
                                 <asp:Parameter Name="ManufacturerID" Type="String" />
                                 <asp:Parameter Name="OriginID" Type="String" />
                                 <asp:Parameter Name="Tag" Type="String" />

@@ -34,6 +34,16 @@ function myfunload() {
         fade: true,
         cssEase: 'linear'
     });
+    $('.bwWrapper').BlackAndWhite({
+        hoverEffect: true,
+        webworkerPath: 'assets/js/',
+        intensity: 1,
+        onImageReady: function (img) {
+            $(img).parent().animate({
+                opacity: 1
+            });
+        }
+    });
     if ($('#sliderParent').size() == 1) {
         var sliderParent = $('#sliderParent').imagesLoaded(function () {
             sliderParent.slick({
@@ -175,13 +185,26 @@ function myListTb() {
         wrapCSS: 'pro-popup',
         openEffect: 'elastic',
         closeEffect: 'elastic',
-
+        width: 400,
         helpers: {
             title: {
                 type: 'inside'
             }
         }
-    });
+        });
+//    $('.fancybox').fancybox({
+//        margin: 15,
+//        padding: 10,
+//        autoResize: false,
+//        minHeight: 612,
+//        iframe: {
+//            scrolling: 'no'
+//        },
+//        width: 855
+//    });
+//    $("#zoom_01").elevateZoom({
+//        cursor: 'move'
+//    });
     if ($('.product-tb').size() > 0) {
         var tbpro;
         var producttb = $('.product-tb').imagesLoaded(function () {

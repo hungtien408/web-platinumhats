@@ -126,7 +126,7 @@
                                 <div class="menu-subin">
                                     <asp:ListView ID="lstCustom" runat="server" DataSourceID="odsCustom" EnableModelValidation="True">
                                         <ItemTemplate>
-                                            <li><a href='<%# progressTitle(Eval("ArticleTitle")) + "-cp-" + Eval("ArticleID") + ".aspx" %>'>
+                                            <li><a href='<%# string.IsNullOrEmpty(Eval("Tag").ToString()) ? (progressTitle(Eval("ArticleTitle")) + "-cp-" + Eval("ArticleID") + ".aspx") : Eval("Tag")  %>'>
                                                 <span class="menu-box"><span class="iconai">
                                                     <img alt='<%# Eval("IconName") %>' src='<%# !string.IsNullOrEmpty(Eval("IconName").ToString()) ? "~/res/article/icon/" + Eval("IconName") : "~/assets/images/icon-m-4.png" %>'
                                                         runat="server" /></span><%# Eval("ArticleTitle") %></span><span class="menubg"></span></a>
@@ -205,8 +205,11 @@
                         <ItemTemplate>
                             <div class="slide">
                                 <a href="javascript:void(0);" class="parent-box fullbox-img contain-img">
+                                    <span class="bwWrapper">
                                     <img class="hideo" alt='<%# Eval("PartnerImage") %>' src='<%# !string.IsNullOrEmpty(Eval("PartnerImage").ToString()) ? "~/res/partner/" + Eval("PartnerImage") : "~/assets/images/parent-img-1.jpg" %>'
-                                        runat="server" /></a>
+                                        runat="server" />
+                                    </span> 
+                                </a>
                             </div>
                         </ItemTemplate>
                         <LayoutTemplate>
@@ -324,6 +327,7 @@
     <script src="assets/js/jquery.uniform.min.js" type="text/javascript"></script>
     <script src="assets/js/isotope.pkgd.min.js" type="text/javascript"></script>
     <script src="assets/js/jquery.panel.mobile.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.BlackAndWhite.min.js" type="text/javascript"></script>
     <script src="assets/js/jquery.textheight.js" type="text/javascript"></script>
     <script src="assets/js/jquery.bgbox.js" type="text/javascript"></script>
     <script src="assets/js/slick.min.js"></script>

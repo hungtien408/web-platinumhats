@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ad/template/adminEn.master" AutoEventWireup="true"
-    CodeFile="productcategory.aspx.cs" Inherits="ad_single_productcategory" %>
+    CodeFile="productcategory1.aspx.cs" Inherits="ad_single_productcategory" %>
 
 <%@ Register TagPrefix="asp" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHead" runat="Server">
@@ -489,12 +489,6 @@
             <asp:Parameter Name="IsShowOnHomePage" Type="String" />
             <asp:Parameter Name="IsAvailable" Type="String" />
         </InsertParameters>
-        <SelectParameters>
-            <asp:Parameter DefaultValue="9" Name="parentID" Type="Int32" />
-            <asp:Parameter DefaultValue="1" Name="increaseLevelCount" Type="Int32" />
-            <asp:Parameter Name="IsShowOnMenu" Type="String" />
-            <asp:Parameter Name="IsShowOnHomePage" Type="String" />
-        </SelectParameters>
         <UpdateParameters>
             <asp:Parameter Name="ProductCategoryID" Type="String" />
             <asp:Parameter Name="ProductCategoryName" Type="String" />

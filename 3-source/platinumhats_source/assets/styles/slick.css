@@ -137,16 +137,46 @@
     width: 27px;
     z-index: 99;
 }
+.slider-for .slick-prev, .slider-for .slick-next {
+    background: url(../images/control-slider.png) no-repeat left top;
+    border: none;
+    display: block;
+    font-size: 0;
+    top: 50%;
+    margin-top: -21px;
+    padding: 0;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+    height: 42px;
+    width: 17px;
+    z-index: 99;
+}
+.slider-nav .slick-prev, .slider-nav .slick-next {
+    background: url(../images/control4.png) no-repeat left top;
+    border: none;
+    display: block !important;
+    top: 50%;
+    position: absolute;
+    margin-top: -12px;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+    text-indent: -999em;
+    height: 24px;
+    width: 10px;
+}
 .slick-slider .slick-prev {
     background-position: left top;
-    left: 0;
+    left: -8px;
 }
 .slick-slider .slick-prev:hover {
     background-position: left bottom;
 }
 .slick-slider .slick-next {
     background-position: right top;
-    right: 0;
+    right: -10px;
 }
 .slick-slider .slick-next:hover {
     background-position: right bottom;
@@ -216,4 +246,66 @@
 #sliderParent {
     padding: 15px 10px;
 }
+}
+/*===================================================*/
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+.slider-big, .slider-big .gallery-img {
+    background-color: #000;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+.slick-slide {
+    /*background-color: #fff;*/
+    display: none;
+    float: left;
+    outline: none;
+    height: 100%;
+    min-height: 1px;
+}
+.gallery-small {
+    padding: 0 5px;
+}
+.gallery-smalls {
+    padding: 10px 5px 0;
+}
+.gallery-small .small-box {
+    border: solid 1px #d0d0d0;
+    overflow: hidden;
+    width: 100%;
+}
+.gallery-img {
+    width: 100%;
+    text-align: center;
+}
+.slick-slide img {
+    display: block;
+}
+@media (min-width: 993px)
+{
+    #myModalGallery .modal-lg {
+        width: 790px;
+    }
+    .slider-big, .slider-big .gallery-img {
+        display: table-cell;
+        height: 460px;
+        vertical-align: middle;
+        text-align: center;
+        width: 760px;
+    }
+}
+@media (min-width: 992px){
+    .modal-lg {
+        width: 900px;
+    }
+}
+@media (min-width: 768px){
+    .modal-dialog {
+        width: 600px;
+        margin: 30px auto;
+    }
 }

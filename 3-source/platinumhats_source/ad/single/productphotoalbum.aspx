@@ -164,7 +164,7 @@
                             <td>
                                 <asp:CheckBox ID="chkSelect" runat="server" ToolTip="Chọn" CssClass="select vam"
                                     onchange="if($(this).find('input:checkbox').attr('checked') == false) $('.selectall').removeAttr('checked');" />
-                                <asp:RadNumericTextBox ID="txtPriority" runat="server" Width="35px" Height="13px"
+                                <asp:RadNumericTextBox ID="txtPriority" runat="server" Width="35px" Height="20px"
                                     Text='<%# Eval("Priority") %>' EmptyMessage="Thứ tự..." Type="Number" ToolTip="Thứ tự">
                                     <NumberFormat AllowRounding="false" DecimalDigits="0" GroupSeparator="." />
                                 </asp:RadNumericTextBox>
@@ -194,8 +194,10 @@
                                     Culture="vi-VN" Language="vi-VN" InputSize="70" AllowedFileExtensions=".jpg,.jpeg,.gif,.png" />
                                 <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="Sai định dạng ảnh (*.jpg, *.jpeg, *.gif, *.png)"
                                     ClientValidationFunction="validateRadUpload" Display="Dynamic"></asp:CustomValidator>
+                                <span class="required">(Kích thước 400px x 316px)</span>
                             </td>
                         </tr>
+                        <asp:Panel ID="Panel3" runat="server" Visible="False">
                         <tr>
                             <td class="left">
                                 Tiêu đề ảnh
@@ -228,6 +230,7 @@
                                 <asp:TextBox ID="txtDescriptionEn" runat="server" Width="500px"></asp:TextBox>
                             </td>
                         </tr>
+                        </asp:Panel>
                         <tr>
                             <td class="left">
                                 Thứ tự
@@ -276,12 +279,14 @@
                                     Culture="vi-VN" Language="vi-VN" InputSize="70" AllowedFileExtensions=".jpg,.jpeg,.gif,.png" />
                                 <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="Sai định dạng ảnh (*.jpg, *.jpeg, *.gif, *.png)"
                                     ClientValidationFunction="validateRadUpload" Display="Dynamic"></asp:CustomValidator>
+                                <span class="required">(Kích thước 400px x 316px)</span>
                             </td>
                             <td rowspan="5" valign="top">
                                 <asp:RadBinaryImage Style="display: block;" runat="server" ID="RadBinaryImage1" ImageUrl='<%# "~/res/product/album/" + Eval("ImageName") %>'
                                     Height='150' Width="150" ResizeMode="Fit" />
                             </td>
                         </tr>
+                        <asp:Panel ID="Panel3" runat="server" Visible="False">
                         <tr>
                             <td class="left">
                                 Tiêu đề ảnh
@@ -314,6 +319,7 @@
                                 <asp:TextBox ID="txtDescripttionEn" runat="server" Width="500px" Text='<%# Bind("Descripttion")%>'></asp:TextBox>
                             </td>
                         </tr>
+                        </asp:Panel>
                         <tr>
                             <td class="left">
                                 Thứ tự

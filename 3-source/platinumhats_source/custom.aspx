@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site-sub.master" AutoEventWireup="true"
-    CodeFile="product.aspx.cs" Inherits="product" %>
+    CodeFile="custom.aspx.cs" Inherits="product" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <%--<title>Platinum Hats</title>
@@ -36,7 +36,7 @@
                 <asp:ObjectDataSource ID="odsProductCategory" runat="server" SelectMethod="ProductCategorySelectAll"
                     TypeName="TLLib.ProductCategory">
                     <SelectParameters>
-                        <asp:Parameter DefaultValue="9" Name="parentID" Type="Int32" />
+                        <asp:Parameter DefaultValue="10" Name="parentID" Type="Int32" />
                         <asp:Parameter DefaultValue="1" Name="increaseLevelCount" Type="Int32" />
                         <asp:Parameter DefaultValue="" Name="IsShowOnMenu" Type="String" />
                         <asp:Parameter DefaultValue="True" Name="IsShowOnHomePage" Type="String" />
@@ -78,7 +78,7 @@
                                 <asp:Parameter Name="Description" Type="String" />
                                 <asp:Parameter Name="PriceFrom" Type="String" />
                                 <asp:Parameter Name="PriceTo" Type="String" />
-                                <asp:QueryStringParameter DefaultValue="9" Name="CategoryID" QueryStringField="pci" Type="String" />
+                                <asp:QueryStringParameter DefaultValue="10" Name="CategoryID" QueryStringField="pci" Type="String" />
                                 <asp:Parameter Name="ManufacturerID" Type="String" />
                                 <asp:Parameter Name="OriginID" Type="String" />
                                 <asp:Parameter Name="Tag" Type="String" />

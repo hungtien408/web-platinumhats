@@ -33,7 +33,7 @@ public partial class product : System.Web.UI.Page
                 strMetaTitle = Server.HtmlDecode(row["MetaTitle"].ToString());
                 strMetaDescription = Server.HtmlDecode(row["MetaDescription"].ToString());
 
-                //hdnProducts.Value = progressTitle(dv[0]["ProductCategoryName"].ToString()) + "-pci-" + dv[0]["ProductCategoryID"].ToString() + ".aspx";
+                hdnProducts.Value = progressTitle(dv[0]["ProductCategoryName"].ToString()) + "-pci-" + dv[0]["ProductCategoryID"].ToString() + ".aspx";
             }
             else
             {

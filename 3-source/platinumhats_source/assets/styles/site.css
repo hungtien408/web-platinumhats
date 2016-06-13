@@ -806,6 +806,11 @@ body .mobilep-right {
         display: block;
         width: 100%;
     }
+    .bwWrapper {
+    display: block;
+    position: relative;
+    width: 100%;
+}
 /*====================*/
 .wrap-contactus {
     background: url(../images/contact-bg.jpg) no-repeat center center;

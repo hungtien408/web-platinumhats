@@ -208,7 +208,7 @@ public partial class ad_single_product : System.Web.UI.Page
             string Tag = ((RadTextBox)row.FindControl("txtTag")).Text.Trim();
             string CategoryID = ((RadComboBox)row.FindControl("ddlCategory")).SelectedValue;
             if ("".Equals(CategoryID))
-                CategoryID = "9";
+                CategoryID = "10";
             string ManufacturerID = ((RadComboBox)row.FindControl("ddlManufacturer")).SelectedValue;
             string OriginID = ((RadComboBox)row.FindControl("ddlOrigin")).SelectedValue;
             string InStock = ((CheckBox)row.FindControl("chkInStock")).Checked.ToString();
