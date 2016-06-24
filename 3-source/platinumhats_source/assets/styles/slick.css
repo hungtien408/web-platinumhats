@@ -138,7 +138,8 @@
     z-index: 99;
 }
 .slider-for .slick-prev, .slider-for .slick-next {
-    background: url(../images/control-slider.png) no-repeat left top;
+    /*background: url(../images/control-slider.png) no-repeat left top;*/
+    background: none;
     border: none;
     display: block;
     font-size: 0;

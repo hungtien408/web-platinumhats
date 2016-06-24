@@ -342,7 +342,7 @@
                             <%# string.Format("{0:dd/MM/yyyy hh:mm tt}", Eval("CreateDate"))%>
                         </ItemTemplate>
                     </asp:GridTemplateColumn>
-                    <asp:GridTemplateColumn DataField="ImageName" HeaderText="Ảnh" SortExpression="ImageName">
+                    <asp:GridTemplateColumn DataField="ImageName" HeaderText="Ảnh" SortExpression="ImageName" Visible="False">
                         <ItemTemplate>
                             <asp:Panel ID="Panel1" runat="server" Visible='<%# string.IsNullOrEmpty( Eval("ImageName").ToString()) ? false : true %>'>
                                 <img alt="" src='<%# "~/res/article/thumbs/" + Eval("ImageName") %>' width="80" runat="server"
@@ -387,7 +387,7 @@
                                 <hr />
                             </div>
                             <table class="search">
-                                <tr>
+                                <tr class="invisible">
                                     <td class="left" valign="top">
                                         Ảnh đại diện
                                     </td>

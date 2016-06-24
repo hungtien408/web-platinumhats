@@ -76,7 +76,7 @@
                                         <img class="img-responsive" src='<%# "~/res/product/album/thumbs/" + Eval("ImageName") %>'
                                 visible='<%# string.IsNullOrEmpty( Eval("ImageName").ToString()) ? false 
 : true %>'
-                                runat="server" alt="" width="124" height="80" />
+                                runat="server" alt="" width="154" height="80" />
                                     </div>
                                 </div>
 

@@ -126,7 +126,7 @@ public partial class ad_single_productphotoalbum : System.Web.UI.Page
                 if (!string.IsNullOrEmpty(strImageName))
                 {
                     FileImageName.UploadedFiles[0].SaveAs(Server.MapPath(strFullPath));
-                    ResizeCropImage.ResizeByCondition(strFullPath, 400, 316);
+                    ResizeCropImage.ResizeByCondition(strFullPath, 800, 600);
                     ResizeCropImage.CreateThumbNailByCondition("~/res/product/album/", "~/res/product/album/thumbs/", strImageName, 120, 120);
                 }
                 RadListView1.InsertItemPosition = RadListViewInsertItemPosition.None;
@@ -162,7 +162,7 @@ public partial class ad_single_productphotoalbum : System.Web.UI.Page
                     string strFullPath = "~/res/product/album/" + strImageName;
 
                     FileImageName.UploadedFiles[0].SaveAs(Server.MapPath(strFullPath));
-                    ResizeCropImage.ResizeByCondition(strFullPath, 400, 316);
+                    ResizeCropImage.ResizeByCondition(strFullPath, 800, 600);
                     ResizeCropImage.CreateThumbNailByCondition("~/res/product/album/", "~/res/product/album/thumbs/", strImageName, 120, 120);
                 }
             }

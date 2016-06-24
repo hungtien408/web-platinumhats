@@ -237,10 +237,13 @@
             <!--footer-->
             <div id="footer">
                 <div class="container">
-                    <div class="col-md-7">
+                    <div class="col-md-3">
                         <div class="logo">
                             <a id="A1" href="~/" runat="server">
                                 <img src="assets/images/logo2.png" alt="logo" /></a></div>
+                        
+                    </div>
+                    <div class="col-md-5">
                         <ul class="list-address">
                             <asp:ListView ID="lstFooter" runat="server" DataSourceID="odsFooter" EnableModelValidation="True">
                                 <ItemTemplate>
@@ -278,12 +281,12 @@
                             </asp:ObjectDataSource>
                         </ul>
                     </div>
-                    <div class="col-md-5 footer-right">
-                        <div class="menu-footer">
+                    <div class="col-md-4 footer-right">
+                        <%--<div class="menu-footer">
                             <a class="first" href="~/" runat="server">Home</a>|<a href="company-gt-26.aspx">About
                                 Us</a>|<a href="product.aspx">Products</a>|<a href="news.aspx">New</a>|<a class="last"
                                     href="contact.aspx">Contact</a>
-                        </div>
+                        </div>--%>
                         <div class="copyright">
                             Platinum hats &copy; 2016 All rights reserved.<br />
                             <a href="http://www.tranlegroup.com" target="_blank">Designed by</a> <a href="http://www.tranlegroup.com"

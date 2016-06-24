@@ -24,13 +24,16 @@
             </div>
             <asp:ListView ID="lstAbout" runat="server" DataSourceID="odsAbout" EnableModelValidation="True">
                 <ItemTemplate>
-                    <div class="aboutus-img">
+                    <%--<div class="aboutus-img">
                         <img alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/article/" + Eval("ImageName") : "~/assets/images/about-co.jpg" %>' runat="server" />
-                    </div>
+                    </div>--%>
                     <div class="aboutus-content text-center">
                         <h4 class="text-uppercase title-3">
                             <%# Eval("ArticleTitle")%></h4>
-                        <div class="description lineb7">
+                        <%--<div class="description lineb7">
+                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("Content") %>'></asp:Label>
+                        </div>--%>
+                        <div class="description">
                             <asp:Label ID="Label1" runat="server" Text='<%# Eval("Content") %>'></asp:Label>
                         </div>
                     </div>

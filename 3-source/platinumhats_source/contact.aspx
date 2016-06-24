@@ -44,7 +44,7 @@
                             <div class="row">
                                 <div class="col-xs-6">
                                     <label class="contact-lb">
-                                        Họ &amp; Tên<span class="error">*</span></label>
+                                        Full name<span class="error">*</span></label>
                                     <div class="contact-input">
                                         <asp:TextBox ID="txtFullName" CssClass="contact-textbox" runat="server"></asp:TextBox>
                                         <asp:RequiredFieldValidator CssClass="lb-error" ID="RequiredFieldValidator1" runat="server"
@@ -70,7 +70,7 @@
                         </div>
                         <div class="contact-w">
                             <label class="contact-lb">
-                                Lời nhắn<span class="error">*</span></label>
+                                Content<span class="error">*</span></label>
                             <div class="contact-input">
                                 <asp:TextBox ID="txtContent" CssClass="contact-area" runat="server" TextMode="MultiLine"></asp:TextBox>
                                  <asp:RequiredFieldValidator CssClass="lb-error" ID="RequiredFieldValidator3" runat="server"
@@ -107,7 +107,7 @@
                     </div>
                         <div class="contact-w">
                             <div class="contact-btn">
-                                <asp:Button ID="btnSend" CssClass="button-btn" runat="server" Text="Gởi lời nhắn" ValidationGroup="SendEmail" OnClick="btSend_Click" />
+                                <asp:Button ID="btnSend" CssClass="button-btn" runat="server" Text="Submit" ValidationGroup="SendEmail" OnClick="btSend_Click" />
                             </div>
                         </div>
                     </div>

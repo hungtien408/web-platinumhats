@@ -185,7 +185,8 @@ function myListTb() {
         wrapCSS: 'pro-popup',
         openEffect: 'elastic',
         closeEffect: 'elastic',
-        width: 400,
+        //        width: 400,
+        width: 820,
         helpers: {
             title: {
                 type: 'inside'

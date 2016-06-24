@@ -267,10 +267,12 @@
 }
 .pro-popup .fancybox-close {
     background: #f9f9f9  url(../images/icon-close.gif) no-repeat center center;
-    right: 15px;
-    top: 15px;
+    right: -15px;
+    top: -15px;
     height: 32px;
     width: 32px;
+    border-radius: 50%;
+    background-size: 15px;
 }
 .pro-popup .fancybox-nav span {
     background: url(../images/control-slider.png) no-repeat left top;
