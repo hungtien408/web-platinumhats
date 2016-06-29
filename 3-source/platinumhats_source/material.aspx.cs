@@ -20,10 +20,10 @@ public partial class product : System.Web.UI.Page
             }
 
             string strTitle, strDescription, strMetaTitle, strMetaDescription;
-            if (!string.IsNullOrEmpty(Request.QueryString["pti"]))
+            if (!string.IsNullOrEmpty(Request.QueryString["pmi"]))
             {
                 var oProductCategory = new ProductCategory();
-                var dv = oProductCategory.ProductCategorySelectOne(Request.QueryString["pti"]).DefaultView;
+                var dv = oProductCategory.ProductCategorySelectOne(Request.QueryString["pmi"]).DefaultView;
 
                 if (dv != null && dv.Count <= 0) return;
                 var row = dv[0];
@@ -37,7 +37,7 @@ public partial class product : System.Web.UI.Page
             }
             else
             {
-                strTitle = strMetaTitle = "Custom";
+                strTitle = strMetaTitle = "Material";
                 strDescription = "";
                 strMetaDescription = "";
             }

@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site-sub.master" AutoEventWireup="true"
-    CodeFile="custom.aspx.cs" Inherits="product" %>
+    CodeFile="material.aspx.cs" Inherits="product" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <%--<title>Platinum Hats</title>
@@ -24,19 +24,19 @@
                 <asp:ListView ID="lstProductCategory" runat="server" DataSourceID="odsProductCategory"
                     EnableModelValidation="True">
                     <ItemTemplate>
-                        <a class="corner" href='<%# progressTitle(Eval("ProductCategoryName")) + "-pti-" + Eval("ProductCategoryID") + ".aspx" %>'>
+                        <a class="corner" href='<%# progressTitle(Eval("ProductCategoryName")) + "-pmi-" + Eval("ProductCategoryID") + ".aspx" %>'>
                             <%# Eval("ProductCategoryName")%></a>
                     </ItemTemplate>
                     <LayoutTemplate>
                         <div class="menu-center mta35">
-                            <a class="corner" href="custom.aspx">All</a> <span runat="server" id="itemPlaceholder" />
+                            <a class="corner" href="material.aspx">All</a> <span runat="server" id="itemPlaceholder" />
                         </div>
                     </LayoutTemplate>
                 </asp:ListView>
                 <asp:ObjectDataSource ID="odsProductCategory" runat="server" SelectMethod="ProductCategorySelectAll"
                     TypeName="TLLib.ProductCategory">
                     <SelectParameters>
-                        <asp:Parameter DefaultValue="10" Name="parentID" Type="Int32" />
+                        <asp:Parameter DefaultValue="12" Name="parentID" Type="Int32" />
                         <asp:Parameter DefaultValue="1" Name="increaseLevelCount" Type="Int32" />
                         <asp:Parameter DefaultValue="" Name="IsShowOnMenu" Type="String" />
                         <asp:Parameter DefaultValue="True" Name="IsShowOnHomePage" Type="String" />
@@ -78,7 +78,7 @@
                                 <asp:Parameter Name="Description" Type="String" />
                                 <asp:Parameter Name="PriceFrom" Type="String" />
                                 <asp:Parameter Name="PriceTo" Type="String" />
-                                <asp:QueryStringParameter DefaultValue="10" Name="CategoryID" QueryStringField="pci" Type="String" />
+                                <asp:QueryStringParameter DefaultValue="12" Name="CategoryID" QueryStringField="pci" Type="String" />
                                 <asp:Parameter Name="ManufacturerID" Type="String" />
                                 <asp:Parameter Name="OriginID" Type="String" />
                                 <asp:Parameter Name="Tag" Type="String" />

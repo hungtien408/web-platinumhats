@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ad/template/adminEn.master" AutoEventWireup="true"
-    CodeFile="custom.aspx.cs" Inherits="ad_single_product" %>
+    CodeFile="material.aspx.cs" Inherits="ad_single_product" %>
 
 <%@ Register TagPrefix="asp" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 <%@ Register Assembly="Spaanjaars.Toolkit" Namespace="Spaanjaars.Toolkit" TagPrefix="isp" %>
@@ -120,7 +120,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="Server">
     <h3 class="mainTitle">
         <img alt="" src="../assets/images/product.png" class="vam" />
-        Custom
+        Material
     </h3>
     <asp:RadAjaxPanel ID="RadAjaxPanel1" runat="server" ClientEvents-OnRequestStart="conditionalPostback">
         <asp:Panel ID="pnlSearch" DefaultButton="btnSearch" runat="server">
@@ -532,7 +532,7 @@
                                     <td valign="top" style="width: 500px">
                                         <div class="sub_box">
                                             <div class="head">
-                                                Thông Tin Custom
+                                                Thông Tin Material
                                             </div>
                                             <div class="cont">
                                                 <asp:HiddenField ID="hdnProductID" runat="server" Value='<%# Eval("ProductID") %>' />
@@ -1111,7 +1111,7 @@
                 Type="String" />
             <asp:ControlParameter ControlID="txtSearchPriceTo" Name="PriceTo" PropertyName="Text"
                 Type="String" />
-            <asp:ControlParameter ControlID="ddlSearchCategory" DefaultValue="10" Name="CategoryID" PropertyName="SelectedValue"
+            <asp:ControlParameter ControlID="ddlSearchCategory" DefaultValue="12" Name="CategoryID" PropertyName="SelectedValue"
                 Type="String" />
             <asp:ControlParameter ControlID="ddlSearchManufacturer" Name="ManufacturerID" PropertyName="SelectedValue"
                 Type="String" />
@@ -1176,7 +1176,7 @@
     <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" SelectMethod="ProductCategorySelectAll"
         TypeName="TLLib.ProductCategory">
         <SelectParameters>
-            <asp:Parameter DefaultValue="10" Name="parentID" Type="Int32" />
+            <asp:Parameter DefaultValue="12" Name="parentID" Type="Int32" />
             <asp:Parameter DefaultValue="1" Name="increaseLevelCount" Type="Int32" />
             <asp:Parameter Name="IsShowOnMenu" Type="String" />
             <asp:Parameter Name="IsShowOnHomePage" Type="String" />
