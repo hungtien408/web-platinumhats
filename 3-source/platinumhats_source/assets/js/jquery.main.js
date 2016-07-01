@@ -185,6 +185,18 @@ function myListTb() {
         wrapCSS: 'pro-popup',
         openEffect: 'elastic',
         closeEffect: 'elastic',
+        //width: 400,
+        width: 500,
+        helpers: {
+            title: {
+                type: 'inside'
+            }
+        }
+    });
+    $(".fancybox1").fancybox({
+        wrapCSS: 'pro-popup',
+        openEffect: 'elastic',
+        closeEffect: 'elastic',
         //        width: 400,
         width: 1120,
         minHeight: 420,
@@ -193,7 +205,7 @@ function myListTb() {
                 type: 'inside'
             }
         }
-        });
+    });
 //    $('.fancybox').fancybox({
 //        margin: 15,
 //        padding: 10,
