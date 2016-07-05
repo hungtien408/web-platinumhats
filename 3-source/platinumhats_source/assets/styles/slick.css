@@ -255,7 +255,7 @@
     margin: 10px;
 }
 .slider-big, .slider-big .gallery-img {
-    background-color: #000;
+    /*background-color: #000;*/
     position: relative;
     width: 100%;
     z-index: 1;

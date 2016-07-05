@@ -50,12 +50,19 @@
                             <ItemTemplate>
                                 <div class="col-xs-4 element-item">
                                     <div class="product-box text-center">
-                                        <a class="product-img box-img fancybox fancybox.iframe" href='<%# progressTitle(Eval("ProductName"))  +"-gl-" + Eval("ProductID") + ".aspx" %>'>
+                                        <%--<a class="product-img box-img fancybox fancybox.iframe" href='<%# progressTitle(Eval("ProductName"))  +"-gl-" + Eval("ProductID") + ".aspx" %>'>
                                             <img src='<%# "~/res/product/" + Eval("ImageName") %>' visible='<%# string.IsNullOrEmpty( Eval("ImageName").ToString()) ? false : true %>' runat="server" alt="" />
                                             <span class="mask-img"></span>
                                         </a>
                                         <h4 class="product-name">
                                             <a class="fancybox fancybox.iframe" href='<%# progressTitle(Eval("ProductName"))  +"-gl-" + Eval("ProductID") + ".aspx" %>'>
+                                                <%# Eval("ProductName")%></a></h4>--%>
+                                        <a class="product-img box-img" href='<%# progressTitle(Eval("ProductName"))  +"-gl-" + Eval("ProductID") + ".aspx" %>'>
+                                            <img id="Img1" src='<%# "~/res/product/" + Eval("ImageName") %>' visible='<%# string.IsNullOrEmpty( Eval("ImageName").ToString()) ? false : true %>' runat="server" alt="" />
+                                            <span class="mask-img"></span>
+                                        </a>
+                                        <h4 class="product-name">
+                                            <a href='<%# progressTitle(Eval("ProductName"))  +"-gl-" + Eval("ProductID") + ".aspx" %>'>
                                                 <%# Eval("ProductName")%></a></h4>
                                     </div>
                                 </div>

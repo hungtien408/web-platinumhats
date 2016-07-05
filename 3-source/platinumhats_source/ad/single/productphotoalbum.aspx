@@ -194,10 +194,10 @@
                                     Culture="vi-VN" Language="vi-VN" InputSize="70" AllowedFileExtensions=".jpg,.jpeg,.gif,.png" />
                                 <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="Sai định dạng ảnh (*.jpg, *.jpeg, *.gif, *.png)"
                                     ClientValidationFunction="validateRadUpload" Display="Dynamic"></asp:CustomValidator>
-                                <span class="required">(Kích thước 400px x 316px)</span>
+                                <span class="required">(Kích thước 500px x 375px)</span>
                             </td>
                         </tr>
-                        <asp:Panel ID="Panel3" runat="server" Visible="False">
+                        
                         <tr>
                             <td class="left">
                                 Tiêu đề ảnh
@@ -206,6 +206,7 @@
                                 <asp:TextBox ID="txtTitle" Width="500px" runat="server"></asp:TextBox>
                             </td>
                         </tr>
+                        <asp:Panel ID="Panel3" runat="server" Visible="False">
                         <tr>
                             <td class="left" valign="top">
                                 Mô tả
@@ -279,14 +280,14 @@
                                     Culture="vi-VN" Language="vi-VN" InputSize="70" AllowedFileExtensions=".jpg,.jpeg,.gif,.png" />
                                 <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="Sai định dạng ảnh (*.jpg, *.jpeg, *.gif, *.png)"
                                     ClientValidationFunction="validateRadUpload" Display="Dynamic"></asp:CustomValidator>
-                                <span class="required">(Kích thước 400px x 316px)</span>
+                                <span class="required">(Kích thước 500px x 375px)</span>
                             </td>
                             <td rowspan="5" valign="top">
                                 <asp:RadBinaryImage Style="display: block;" runat="server" ID="RadBinaryImage1" ImageUrl='<%# "~/res/product/album/" + Eval("ImageName") %>'
                                     Height='150' Width="150" ResizeMode="Fit" />
                             </td>
                         </tr>
-                        <asp:Panel ID="Panel3" runat="server" Visible="False">
+                        
                         <tr>
                             <td class="left">
                                 Tiêu đề ảnh
@@ -295,6 +296,7 @@
                                 <asp:TextBox ID="txtTitle" Width="500px" runat="server" Text='<%# Bind("Title") %>'></asp:TextBox>
                             </td>
                         </tr>
+                        <asp:Panel ID="Panel3" runat="server" Visible="False">
                         <tr>
                             <td class="left" valign="top">
                                 Mô tả

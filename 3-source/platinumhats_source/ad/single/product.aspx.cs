@@ -500,7 +500,7 @@ public partial class ad_single_product : System.Web.UI.Page
         string newName = Guid.NewGuid().GetHashCode().ToString("X") + e.File.GetExtension();
         e.File.SaveAs(Server.MapPath(targetFolder + newName));
 
-        ResizeCropImage.ResizeByCondition(targetFolder + newName, 400, 316);
+        //ResizeCropImage.ResizeByCondition(targetFolder + newName, 400, 316);
         ResizeCropImage.CreateThumbNailByCondition("~/res/product/album/", "~/res/product/album/thumbs/", newName, 120, 120);
 
         if (string.IsNullOrEmpty(ProductID))

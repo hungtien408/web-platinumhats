@@ -187,6 +187,7 @@ function myListTb() {
         closeEffect: 'elastic',
         //width: 400,
         width: 500,
+        minHeight: 500,
         helpers: {
             title: {
                 type: 'inside'
@@ -199,7 +200,7 @@ function myListTb() {
         closeEffect: 'elastic',
         //        width: 400,
         width: 1120,
-        minHeight: 420,
+        minHeight: 620,
         helpers: {
             title: {
                 type: 'inside'

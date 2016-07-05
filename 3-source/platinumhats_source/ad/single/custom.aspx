@@ -886,6 +886,7 @@
                                                         AllowedFileExtensions="jpg,jpeg,gif,png" Localization-Select="Chọn" Localization-Cancel="Hủy"
                                                         Localization-Remove="Xóa" OnFileUploaded="FileImageAlbum_FileUploaded">
                                                     </asp:RadAsyncUpload>
+                                                    <span class="required">(Kích thước 500px x 375px)</span>
                                                     <asp:RadButton ID="btnUpload" runat="server" Text="Tải lên" ShowPostBackMask="False">
                                                         <Icon PrimaryIconUrl="~/ad/assets/images/up.png" />
                                                     </asp:RadButton>
@@ -924,7 +925,7 @@
                                                                         <tr>
                                                                             <td valign="top" style="padding-right: 10px">
                                                                                 <table class="search" width="100%">
-                                                                                    <tr class="invisible">
+                                                                                    <tr>
                                                                                         <td class="left" style="width: 70px">
                                                                                             Tiêu đề ảnh
                                                                                         </td>
