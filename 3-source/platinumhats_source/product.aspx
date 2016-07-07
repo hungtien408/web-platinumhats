@@ -16,8 +16,8 @@
                 <div class="head-title">
                     <h4 class="text-uppercase title-1 font400 cotit">
                         <asp:Label ID="lblTitle2" runat="server"></asp:Label></h4>
-                    <div class="node">
-                        Previous headwear productions</div>
+                    <%--<div class="node">
+                        Previous headwear productions</div>--%>
                 </div>
             </div>
             <div id="colAside" class="fright aside-280">

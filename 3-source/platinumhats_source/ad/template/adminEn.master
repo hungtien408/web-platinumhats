@@ -137,7 +137,7 @@
                             </asp:RadMenuItem>
                         </Items>
                     </asp:RadMenuItem>
-                    <asp:RadMenuItem runat="server" Owner="RadMenu1" PostBack="False" Text="Custom"
+                    <%--<asp:RadMenuItem runat="server" Owner="RadMenu1" PostBack="False" Text="Custom"
                         Font-Bold="True">
                         <Items>
                             <asp:RadMenuItem runat="server" NavigateUrl="~/ad/single/custom.aspx" Text="Quản Lý Custom">
@@ -148,6 +148,9 @@
                                 Text="Quản Lý Danh Mục">
                             </asp:RadMenuItem>
                         </Items>
+                    </asp:RadMenuItem>--%>
+                    <asp:RadMenuItem runat="server" Owner="RadMenu1" PostBack="False" Text="Customize"
+                        Font-Bold="True" NavigateUrl="~/ad/single/customize.aspx">
                     </asp:RadMenuItem>
                     <asp:RadMenuItem runat="server" Owner="RadMenu1" PostBack="False" Text="Material"
                         Font-Bold="True">

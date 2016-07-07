@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site-sub.master" AutoEventWireup="true"
-    CodeFile="custom.aspx.cs" Inherits="product" %>
+    CodeFile="custom1.aspx.cs" Inherits="product" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <%--<title>Platinum Hats</title>

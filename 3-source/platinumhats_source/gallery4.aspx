@@ -30,7 +30,7 @@
             float: left;
             padding: 0;
             width: 52%;
-            /*padding-left: 5px;*/
+            padding-left: 5px;
         }
         .gallery-small
         {
@@ -42,7 +42,8 @@
             float: left;
             /*width: 92px;*/
             width: 16%;
-            border: 1px solid #000;
+            /*border: 1px solid #000;*/
+            padding: 2px;
         }
         .gallery-img img, .small-box img
         {
@@ -51,8 +52,8 @@
         }
         .slider-big
         {
-            background-color: #000;
-            border: 1px solid #000;
+            /*background-color: #000;
+            border: 1px solid #000;*/
             position: relative;
             /*width: 500px;
             height: 100%;*/
@@ -79,11 +80,12 @@
             line-height: 36px;
             color: #000;
             margin: 5px 0;
-            width: 46%;
+            /*width: 46%;*/
+            width: 48%;
             float: left;
         }
         .title-custom2 {
-            text-align: center;
+            text-align: left;
         }
         @media (max-width: 639px) {
             .slider-big, .slider-big .gallery-img, .gallery-smalls {
@@ -100,14 +102,14 @@
         <div class="container">
             <div class="head head-lineb">
                 <div id="site" class="text-right">
-                    <a class="home" id="A1" href="~/" runat="server">Home</a>&gt;<span><asp:Label ID="lblTitle"
+                    <a class="home" id="A1" href="~/" runat="server">Home</a>&gt;<a href="material.aspx">Material</a>&gt;<span><asp:Label ID="lblTitle"
                         runat="server"></asp:Label></span>
                 </div>
                 <div class="head-title">
                     <h4 class="text-uppercase title-1 font400 cotit">
                         <asp:Label ID="lblTitle2" runat="server"></asp:Label></h4>
-                    <div class="node">
-                        Previous headwear productions</div>
+                    <%--<div class="node">
+                        Previous headwear productions</div>--%>
                 </div>
             </div>
             <%--<div id="colAside" class="fright aside-280">
@@ -135,8 +137,8 @@
             </div>--%>
             <div id="colContent">
                 <div id="galleryLists" class="gallery-slider">
-                    <h2 class="title-color">
-                        Cotton Twill - 100% Cotton</h2>
+                    <%--<h2 class="title-color">
+                        Cotton Twill - 100% Cotton</h2>--%>
                     <div class="slider-for">
                         <h4 class="title-custom">
                             Scarlet - TCX</h4>
