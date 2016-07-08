@@ -325,6 +325,12 @@ function myListTb() {
             }, 300);
         });
     }
+    $(".menu-custom a").click(function () {
+        var idboxs = $(this).attr("href");
+        var offset = $(idboxs).offset();
+        $("html, body").stop(true, true).animate({ scrollTop: offset.top - 115 }, 500);
+        return false;
+    });
 }
 /*===============================*/
 function myfunsroll() {
@@ -359,8 +365,12 @@ function menusroll() {
 function srollmenu(htop) {
     if ($(window).scrollTop() > htop) {
         $("#header").addClass("header-sroll");
+        $(".menu-custom").addClass("custom-sroll");
+        //$(".menu-custom").css("display", "none");
     } else {
         $("#header").removeClass("header-sroll");
+        $(".menu-custom").removeClass("custom-sroll");
+        //$(".menu-custom").css("display", "block");
     }
 }
 //==================

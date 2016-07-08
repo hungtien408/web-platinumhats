@@ -1848,3 +1848,48 @@ body .mobilep-right {
             line-height: 32px;
             padding-bottom: 5px;
         }
+.menu-custom, .menu-custom2 {
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.menu-custom2 {
+    display: none;
+}
+.menu-custom li {
+    float: left;
+    width: 100%;
+}
+.menu-custom li a {
+    width: 100%;
+    display: block;
+}
+.colCustom {
+    float: left;
+    width: 72%;
+}
+.wrap-custom {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+}
+.wrapper-custom {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.custom-box {
+    position: relative;
+    padding: 20px 0;
+    border-bottom: dotted 1px #959595;
+}
+.custom-name {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 20px;
+}
+.custom-sroll {
+    position: fixed;
+    width: 280px;
+}

@@ -227,6 +227,9 @@
     .pricing-tb > div {
         width: 25%;
     }
+    .wrap-custom {
+        display: none;
+    }
 
 }
 @media (min-width: 768px)
