@@ -1892,4 +1892,9 @@ body .mobilep-right {
 .custom-sroll {
     position: fixed;
     width: 280px;
+    top: 100px;
+}
+.custom-content img {
+    display: block;
+    width: 100% !important;
 }
