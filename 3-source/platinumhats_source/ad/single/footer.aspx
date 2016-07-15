@@ -94,7 +94,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="Server">
     <h3 class="mainTitle">
         <img alt="" src="../assets/images/product.png" class="vam" />
-        Footer
+        Contact
     </h3>
     <asp:RadAjaxPanel ID="RadAjaxPanel1" runat="server" ClientEvents-OnRequestStart="conditionalPostback">
         <asp:Panel ID="pnlSearch" DefaultButton="btnSearch" runat="server" Visible="False">
@@ -302,7 +302,7 @@
                     </asp:GridTemplateColumn>
                     <asp:GridBoundColumn HeaderText="ID" DataField="ArticleID" SortExpression="ArticleID" Visible="False">
                     </asp:GridBoundColumn>
-                    <asp:GridBoundColumn DataField="ArticleTitle" HeaderText="Tiêu đề" SortExpression="ArticleTitle" Visible="False" />
+                    <asp:GridBoundColumn DataField="ArticleTitle" HeaderText="Công Ty" SortExpression="ArticleTitle" />
                     <asp:GridBoundColumn DataField="ArticleCategoryName" HeaderText="Danh mục" SortExpression="ArticleCategoryName" Visible="False" />
                     <asp:GridBoundColumn DataField="Tag" HeaderText="Địa chỉ" SortExpression="Tag" />
                     <asp:GridBoundColumn DataField="MetaTittle" HeaderText="Điện thoại" SortExpression="MetaTittle" />
@@ -480,18 +480,18 @@
                                         <asp:TextBox ID="txtMetaDescription" runat="server" Width="500px" Text='<%# Bind("MetaDescription") %>'></asp:TextBox>
                                     </td>
                                 </tr>
-                                <tr class="invisible">
+                                <tr>
                                     <td class="left">
-                                        Tiêu đề
+                                        Công ty
                                     </td>
                                     <td>
                                         <asp:TextBox ID="txtArticleTitle" runat="server" Text='<%# Bind("ArticleTitle") %>'
                                             Width="500px"></asp:TextBox>
                                     </td>
                                 </tr>
-                                <tr class="invisible">
+                                <tr>
                                     <td class="left" valign="top">
-                                        Tiêu đề 2
+                                        Map
                                     </td>
                                     <td>
                                         <asp:RadEditor ID="txtTitle" StripFormattingOptions="MSWordRemoveAll,ConvertWordLists,MSWordNoFonts,Font,Css,Span" ContentFilters="ConvertCharactersToEntities,ConvertToXhtml,OptimizeSpans,IndentHTMLContent,ConvertFontToSpan,IECleanAnchors,FixUlBoldItalic,RemoveScripts,FixEnclosingP" runat="server" Height="200" Language="vi-VN" Skin="Office2007"
@@ -723,11 +723,11 @@
                     <asp:TargetInput ControlID="txtMetaDescription" />
                 </TargetControls>
             </asp:TextBoxSetting>
-            <asp:TextBoxSetting EmptyMessage="Tiêu đề ...">
+            <%--<asp:TextBoxSetting EmptyMessage="Công ty ...">
                 <TargetControls>
                     <asp:TargetInput ControlID="txtArticleTitle" />
                 </TargetControls>
-            </asp:TextBoxSetting>
+            </asp:TextBoxSetting>--%>
             <%-- Tiếng Anh--%>
             <asp:TextBoxSetting EmptyMessage="Tag(En) ...">
                 <TargetControls>

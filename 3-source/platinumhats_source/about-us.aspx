@@ -44,10 +44,30 @@
                     </div>
                 </LayoutTemplate>
             </asp:ListView>
-            <asp:ObjectDataSource ID="odsAbout" runat="server" SelectMethod="ArticleSelectOne"
+            <%--<asp:ObjectDataSource ID="odsAbout" runat="server" SelectMethod="ArticleSelectOne"
                 TypeName="TLLib.Article">
                 <SelectParameters>
                     <asp:QueryStringParameter Name="ArticleID" QueryStringField="gt" Type="String" />
+                </SelectParameters>
+            </asp:ObjectDataSource>--%>
+            <asp:ObjectDataSource ID="odsAbout" runat="server" SelectMethod="ArticleSelectAll"
+                TypeName="TLLib.Article">
+                <SelectParameters>
+                    <asp:Parameter DefaultValue="1" Name="StartRowIndex" Type="String" />
+                    <asp:Parameter DefaultValue="1" Name="EndRowIndex" Type="String" />
+                    <asp:Parameter Name="Keyword" Type="String" />
+                    <asp:Parameter Name="ArticleTitle" Type="String" />
+                    <asp:Parameter Name="Description" Type="String" />
+                    <asp:Parameter DefaultValue="1" Name="ArticleCategoryID" Type="String" />
+                    <asp:Parameter Name="Tag" Type="String" />
+                    <asp:Parameter Name="IsShowOnHomePage" Type="String" />
+                    <asp:Parameter Name="IsHot" Type="String" />
+                    <asp:Parameter Name="IsNew" Type="String" />
+                    <asp:Parameter Name="FromDate" Type="String" />
+                    <asp:Parameter Name="ToDate" Type="String" />
+                    <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
+                    <asp:Parameter Name="Priority" Type="String" />
+                    <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
                 </SelectParameters>
             </asp:ObjectDataSource>
             <%--<div class="row about-tb25">

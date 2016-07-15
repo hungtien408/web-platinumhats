@@ -86,7 +86,7 @@
             </asp:ObjectDataSource>
         </div>
     </div>
-    <div class="container">
+    <%--<div class="container">
         <div class="head head-tit text-center">
             <h4 class="text-uppercase title-2 linec">
                 <span>OUR PRODUCTS</span></h4>
@@ -121,7 +121,7 @@
                 <asp:Parameter DefaultValue="True" Name="IsShowOnHomePage" Type="String" />
             </SelectParameters>
         </asp:ObjectDataSource>
-    </div>
+    </div>--%>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphMenuMobile" runat="Server">
 </asp:Content>

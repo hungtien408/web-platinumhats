@@ -17,25 +17,54 @@
                 <div class="head-title">
                     <h4 class="text-uppercase title-1 font400 cotit">
                         Contact us</h4>
-                    <div class="node">
-                        We will respond to all your contacts fastest</div>
+                    <%-- <div class="node">
+                        We will respond to all your contacts fastest</div>--%>
                 </div>
             </div>
             <div class="row wrap-contact">
                 <div class="col-md-6">
                     <div class="ipadmo-992">
-                        <h4 class="text-uppercase">
-                            CÔNG TY CỔ PHẦN CNTT TRẦN LÊ</h4>
-                        <div class="address-contact">
-                            <p>
-                                <span class="fa fa-map-marker"></span>111 Ten Lua, Binh Tri Dong B Ward, Tan Binh
-                                Distris, HCMC
-                            </p>
-                            <p>
-                                <span class="fa fa-phone"></span>+84 ( 08) 1234 5678</p>
-                            <p>
-                                <span class="fa fa-envelope"></span><a href="mailto:chanpin89@gmail.com">chanpin89@gmail.com</a></p>
-                        </div>
+                        <asp:ListView ID="lstFooter" runat="server" DataSourceID="odsFooter" EnableModelValidation="True">
+                            <ItemTemplate>
+                                <h4 class="text-uppercase">
+                                    <%# Eval("ArticleTitle")%></h4>
+                                <div class="address-contact">
+                                    <p>
+                                        <span class="fa fa-map-marker"></span>
+                                        <%# Eval("Tag") %>
+                                    </p>
+                                    <p>
+                                        <span class="fa fa-phone"></span>
+                                        <%# Eval("MetaTittle") %></p>
+                                    <p>
+                                        <span class="fa fa-envelope"></span><a href='<%# "mailto:" + Eval("MetaDescription")%>'>
+                                            <%# Eval("MetaDescription")%></a></p>
+                                </div>
+                            </ItemTemplate>
+                            <LayoutTemplate>
+                                <span runat="server" id="itemPlaceholder" />
+                            </LayoutTemplate>
+                        </asp:ListView>
+                        <asp:ObjectDataSource ID="odsFooter" runat="server" SelectMethod="ArticleSelectAll"
+                            TypeName="TLLib.Article">
+                            <SelectParameters>
+                                <asp:Parameter DefaultValue="1" Name="StartRowIndex" Type="String" />
+                                <asp:Parameter DefaultValue="1" Name="EndRowIndex" Type="String" />
+                                <asp:Parameter Name="Keyword" Type="String" />
+                                <asp:Parameter Name="ArticleTitle" Type="String" />
+                                <asp:Parameter Name="Description" Type="String" />
+                                <asp:Parameter DefaultValue="8" Name="ArticleCategoryID" Type="String" />
+                                <asp:Parameter Name="Tag" Type="String" />
+                                <asp:Parameter Name="IsShowOnHomePage" Type="String" />
+                                <asp:Parameter Name="IsHot" Type="String" />
+                                <asp:Parameter Name="IsNew" Type="String" />
+                                <asp:Parameter Name="FromDate" Type="String" />
+                                <asp:Parameter Name="ToDate" Type="String" />
+                                <asp:Parameter DefaultValue="True" Name="IsAvailable" Type="String" />
+                                <asp:Parameter Name="Priority" Type="String" />
+                                <asp:Parameter DefaultValue="True" Name="SortByPriority" Type="String" />
+                            </SelectParameters>
+                        </asp:ObjectDataSource>
                     </div>
                     <div class="wrap-send">
                         <h5>
@@ -73,64 +102,82 @@
                                 Content<span class="error">*</span></label>
                             <div class="contact-input">
                                 <asp:TextBox ID="txtContent" CssClass="contact-area" runat="server" TextMode="MultiLine"></asp:TextBox>
-                                 <asp:RequiredFieldValidator CssClass="lb-error" ID="RequiredFieldValidator3" runat="server"
-                                ValidationGroup="SendEmail" Display="Dynamic" ControlToValidate="txtContent"
-                                ErrorMessage="Information required!" ForeColor="Red"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator CssClass="lb-error" ID="RequiredFieldValidator3" runat="server"
+                                    ValidationGroup="SendEmail" Display="Dynamic" ControlToValidate="txtContent"
+                                    ErrorMessage="Information required!" ForeColor="Red"></asp:RequiredFieldValidator>
                             </div>
                         </div>
                         <div class="row">
-                        <div class="col-xs-6">
-                            <div class="contact-w">
-                                <div class="contact-input">
-                                    <div class="wcodes">
-                                        <asp:TextBox ID="txtVerifyCode" CssClass="contact-textbox" runat="server"></asp:TextBox>
-                                        <asp:TextBoxWatermarkExtender ID="txtVerifyCode_WatermarkExtender" runat="server"
-                                            Enabled="True" WatermarkText="Code" TargetControlID="txtVerifyCode">
-                                        </asp:TextBoxWatermarkExtender>
+                            <div class="col-xs-6">
+                                <div class="contact-w">
+                                    <div class="contact-input">
+                                        <div class="wcodes">
+                                            <asp:TextBox ID="txtVerifyCode" CssClass="contact-textbox" runat="server"></asp:TextBox>
+                                            <asp:TextBoxWatermarkExtender ID="txtVerifyCode_WatermarkExtender" runat="server"
+                                                Enabled="True" WatermarkText="Code" TargetControlID="txtVerifyCode">
+                                            </asp:TextBoxWatermarkExtender>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="contact-w">
+                                    <div class="contact-input">
+                                        <div class="wcodes">
+                                            <asp:RadCaptcha ID="RadCaptcha1" ForeColor="Red" Font-Bold="true" ValidationGroup="SendEmail"
+                                                runat="server" ErrorMessage="+ Mã an toàn: không chính xác." ValidatedTextBoxID="txtVerifyCode"
+                                                Display="Dynamic">
+                                                <CaptchaImage Height="35" Width="135" RenderImageOnly="True" />
+                                            </asp:RadCaptcha>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-6">
-                            <div class="contact-w">
-                                <div class="contact-input">
-                                    <div class="wcodes">
-                                        <asp:RadCaptcha ID="RadCaptcha1" ForeColor="Red" Font-Bold="true" ValidationGroup="SendEmail"
-                                            runat="server" ErrorMessage="+ Mã an toàn: không chính xác." ValidatedTextBoxID="txtVerifyCode"
-                                            Display="Dynamic">
-                                            <CaptchaImage Height="35" Width="135" RenderImageOnly="True" />
-                                        </asp:RadCaptcha>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                         <div class="contact-w">
                             <div class="contact-btn">
-                                <asp:Button ID="btnSend" CssClass="button-btn" runat="server" Text="Submit" ValidationGroup="SendEmail" OnClick="btSend_Click" />
+                                <asp:Button ID="btnSend" CssClass="button-btn" runat="server" Text="Submit" ValidationGroup="SendEmail"
+                                    OnClick="btSend_Click" />
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 desktop-showhide">
                     <div class="desktop-992">
-                        <h4 class="text-uppercase">
-                            CÔNG TY CỔ PHẦN CNTT TRẦN LÊ</h4>
-                        <div class="address-contact">
-                            <p>
-                                <span class="fa fa-map-marker"></span>111 Ten Lua, Binh Tri Dong B Ward, Tan Binh
-                                Distris, HCMC
-                            </p>
-                            <p>
-                                <span class="fa fa-phone"></span>+84 ( 08) 1234 5678</p>
-                            <p>
-                                <span class="fa fa-envelope"></span><a href="mailto:chanpin89@gmail.com">chanpin89@gmail.com</a></p>
-                        </div>
+                        <asp:ListView ID="lstFooter2" runat="server" DataSourceID="odsFooter" EnableModelValidation="True">
+                            <ItemTemplate>
+                                <h4 class="text-uppercase">
+                                    <%# Eval("ArticleTitle")%></h4>
+                                <div class="address-contact">
+                                    <p>
+                                        <span class="fa fa-map-marker"></span>
+                                        <%# Eval("Tag") %>
+                                    </p>
+                                    <p>
+                                        <span class="fa fa-phone"></span>
+                                        <%# Eval("MetaTittle") %></p>
+                                    <p>
+                                        <span class="fa fa-envelope"></span><a href='<%# "mailto:" + Eval("MetaDescription")%>'>
+                                            <%# Eval("MetaDescription")%></a></p>
+                                </div>
+                            </ItemTemplate>
+                            <LayoutTemplate>
+                                <span runat="server" id="itemPlaceholder" />
+                            </LayoutTemplate>
+                        </asp:ListView>
                     </div>
                     <h5 class="mb20">
                         <span>Our Location</span></h5>
-                    <div id="mapshow">
-                    </div>
+                    <%--<div id="mapshow">
+                    </div>--%>
+                    <asp:ListView ID="ListView1" runat="server" DataSourceID="odsFooter" EnableModelValidation="True">
+                            <ItemTemplate>
+                                <%# Eval("Title")%>
+                            </ItemTemplate>
+                            <LayoutTemplate>
+                                <span runat="server" id="itemPlaceholder" />
+                            </LayoutTemplate>
+                        </asp:ListView>
                 </div>
             </div>
         </div>

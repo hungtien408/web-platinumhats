@@ -80,8 +80,8 @@
                     <ul id="menu" class="desktop-992">
                         <li class="active"><a href="~/" runat="server">Home<span class="menubg"></span></a>
                         </li>
-                        <li><a href="javascript:void(0);">About us<span class="menubg"></span><span class="arrow-up"></span></a>
-                            <div class="menu-sub">
+                        <li><a href="about-us.aspx">About us<span class="menubg"></span><%--<span class="arrow-up"></span>--%></a>
+                            <%--<div class="menu-sub">
                                 <div class="menu-subin">
                                     <asp:ListView ID="lstAbout" runat="server" DataSourceID="odsAbout" EnableModelValidation="True">
                                         <ItemTemplate>
@@ -118,7 +118,7 @@
                                         </SelectParameters>
                                     </asp:ObjectDataSource>
                                 </div>
-                            </div>
+                            </div>--%>
                         </li>
                         <li><a href="javascript:void(0);">Custom Program<span class="menubg"></span><span
                             class="arrow-up"></span></a>
@@ -161,7 +161,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li><a href="material.aspx">Material<span class="menubg"></span></a></li>
+                        <li><a href="material.aspx">Fabric<span class="menubg"></span></a></li>
                         <li><a href="product.aspx">Products<span class="menubg"></span></a></li>
                         <li><a href="news.aspx">News<span class="menubg"></span></a></li>
                         <li><a href="contact.aspx">Contact<span class="menubg"></span></a></li>
@@ -290,8 +290,8 @@
                         </div>--%>
                         <div class="copyright">
                             Platinum hats &copy; 2016 All rights reserved.<br />
-                            <a href="http://www.tranlegroup.com" target="_blank">Designed by</a> <a href="http://www.tranlegroup.com"
-                                target="_blank">Tran Le</a></div>
+                            <%--<a href="http://www.tranlegroup.com" target="_blank">Designed by</a> <a href="http://www.tranlegroup.com"
+                                target="_blank">Tran Le</a></div>--%>
                     </div>
                 </div>
             </div>
@@ -342,6 +342,7 @@
         $(document).ready(function () {
         });
     </script>
+    </div>
     </form>
 </body>
 </html>

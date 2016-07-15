@@ -32,7 +32,7 @@
     </script>
     <style type="text/css">
         .gallery-slider {
-            width: 62%;
+            width: 52%;
             margin: 0 auto;
             padding: 20px 0;
         }
