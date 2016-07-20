@@ -31,8 +31,8 @@
                 <div class="head-title">
                     <h4 class="text-uppercase title-1 font400 cotit">
                         <asp:Label ID="lblTitle" runat="server"></asp:Label></h4>
-                    <div class="node">
-                        information activities of the company</div>
+                    <%--<div class="node">
+                        information activities of the company</div>--%>
                 </div>
             </div>
             <div class="menu-center wrap520">

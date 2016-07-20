@@ -18,8 +18,8 @@
                 <div class="head-title">
                     <h4 class="text-uppercase title-1 font400 cotit">
                         <asp:Label ID="lblTitle" runat="server"></asp:Label></h4>
-                    <div class="node">
-                        Learn more about our company and benefits</div>
+                    <%--<div class="node">
+                        Learn more about our company and benefits</div>--%>
                 </div>
             </div>
             <asp:ListView ID="lstAbout" runat="server" DataSourceID="odsAbout" EnableModelValidation="True">

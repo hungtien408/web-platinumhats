@@ -18,8 +18,8 @@
                 <div class="head-title">
                     <h4 class="text-uppercase title-1 font400 cotit">
                         <asp:Label ID="lblTitle" runat="server"></asp:Label></h4>
-                    <div class="node">
-                        4 easy steps to custom headwear</div>
+                    <%--<div class="node">
+                        4 easy steps to custom headwear</div>--%>
                 </div>
             </div>
             <asp:ListView ID="lstCustom" runat="server" DataSourceID="odsCustom" EnableModelValidation="True">

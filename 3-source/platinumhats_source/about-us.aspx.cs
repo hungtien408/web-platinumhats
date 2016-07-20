@@ -43,6 +43,7 @@ public partial class about_us : System.Web.UI.Page
             var meta = new HtmlMeta() { Name = "description", Content = !string.IsNullOrEmpty(strMetaDescription) ? strMetaDescription : strDescription };
             Header.Controls.Add(meta);
 
+            lblTitle.Text = strTitle;
             lblTitle2.Text = strTitle;
         }
     }
