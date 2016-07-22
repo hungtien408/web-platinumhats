@@ -37,7 +37,10 @@ public partial class product : System.Web.UI.Page
             }
             else
             {
-                strTitle = strMetaTitle = "F.A.QUESTION";
+                var oArticle = new Article();
+                var dv2 = oArticle.ArticleSelectOne("28").DefaultView;
+
+                strTitle = strMetaTitle = dv2[0]["ArticleTitle"].ToString();
                 strDescription = "";
                 strMetaDescription = "";
             }
