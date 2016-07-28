@@ -24,9 +24,9 @@
             </div>
             <asp:ListView ID="lstCustom" runat="server" DataSourceID="odsCustom" EnableModelValidation="True">
                 <ItemTemplate>
-                    <h4 class="title-2 linebc text-center font300 cocus">
-                        <%# Eval("Title") %></h4>
-                    <div class="nodec text-center mb50">
+                    <%--<h4 class="title-2 linebc text-center font300 cocus">
+                        <%# Eval("Title") %></h4>--%>
+                    <div class="nodec mb50">
                         <%# Eval("Title2") %></div>
                     <asp:Label ID="Label1" runat="server" Text='<%# Eval("Content") %>'></asp:Label>
                 </ItemTemplate>

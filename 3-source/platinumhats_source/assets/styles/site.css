@@ -1379,7 +1379,8 @@ body .mobilep-right {
 }
 /*======================================*/
 .mb35 {
-    margin-bottom: 35px;
+    /*margin-bottom: 35px;*/
+    margin-bottom: 20px;
 }
 .mb50 {
     margin-bottom: 50px;
@@ -1466,6 +1467,7 @@ body .mobilep-right {
     .aboutus-content .description {
         padding: 10px 0 20px;
         width: 100%;
+        font-weight: 300;
     }
 /*========================*/
 .wrapper-main {
@@ -1868,6 +1870,7 @@ body .mobilep-right {
 .colCustom {
     float: left;
     width: 72%;
+    font-weight: 300;
 }
 .wrap-custom {
     width: 100%;
