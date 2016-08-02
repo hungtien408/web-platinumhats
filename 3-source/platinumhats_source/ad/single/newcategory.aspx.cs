@@ -217,7 +217,7 @@ public partial class ad_single_articlecategory : System.Web.UI.Page
                     ddlParent.SelectedValue = dv[0]["ParentID"].ToString();
             }
 
-            RadAjaxPanel1.ResponseScripts.Add(string.Format("window['UploadId'] = '{0}';", FileImageName.ClientID));
+            //RadAjaxPanel1.ResponseScripts.Add(string.Format("window['UploadId'] = '{0}';", FileImageName.ClientID));
         }
     }
 

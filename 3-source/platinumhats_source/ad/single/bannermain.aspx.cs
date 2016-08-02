@@ -291,7 +291,7 @@ public partial class ad_single_advertisement : System.Web.UI.Page
                     dpToDate.SelectedDate = Convert.ToDateTime(dv[0]["ToDate"]);
             }
 
-            RadAjaxPanel1.ResponseScripts.Add(string.Format("window['UploadId'] = '{0}';", FileFileName.ClientID));
+            //RadAjaxPanel1.ResponseScripts.Add(string.Format("window['UploadId'] = '{0}';", FileFileName.ClientID));
         }
     }
     #endregion

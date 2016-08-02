@@ -94,8 +94,8 @@
         <img alt="" src="../assets/images/category.png" class="vam" />
         Danh Mục Tin Tức</h3>
     <br />
-    <asp:RadAjaxPanel ID="RadAjaxPanel1" runat="server" ClientEvents-OnRequestStart="conditionalPostback"
-        Width="100%">
+    <%--<asp:RadAjaxPanel ID="RadAjaxPanel1" runat="server" ClientEvents-OnRequestStart="conditionalPostback"
+        Width="100%">--%>
         <asp:Label ID="lblError" ForeColor="Red" runat="server"></asp:Label>
         <asp:RadGrid ID="RadGrid1" AllowMultiRowSelection="True" runat="server" Culture="vi-VN" 
             DataSourceID="ObjectDataSource1" GridLines="Horizontal" AutoGenerateColumns="False"
@@ -461,7 +461,7 @@
             <HeaderContextMenu EnableImageSprites="True" CssClass="GridContextMenu GridContextMenu_Default">
             </HeaderContextMenu>
         </asp:RadGrid>
-    </asp:RadAjaxPanel>
+    <%--</asp:RadAjaxPanel>--%>
     <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" DeleteMethod="ArticleCategoryDelete"
         SelectMethod="ArticleCategorySelectAll" TypeName="TLLib.ArticleCategory" UpdateMethod="ArticleCategoryUpdate"
         InsertMethod="ArticleCategoryInsert">

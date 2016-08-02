@@ -96,7 +96,7 @@
         <img alt="" src="../assets/images/advertisement.png" class="vam" />
         Banner</h3>
     <br />
-    <asp:RadAjaxPanel ID="RadAjaxPanel1" runat="server" ClientEvents-OnRequestStart="conditionalPostback">
+    <%--<asp:RadAjaxPanel ID="RadAjaxPanel1" runat="server" ClientEvents-OnRequestStart="conditionalPostback">--%>
         <asp:Panel ID="pnlSearch" DefaultButton="btnSearch" runat="server" Visible="False">
             <table class="search">
                 <tr>
@@ -502,7 +502,7 @@
                 </TargetControls>
             </asp:NumericTextBoxSetting>
         </asp:RadInputManager>
-    </asp:RadAjaxPanel>
+    <%--</asp:RadAjaxPanel>--%>
     <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" DeleteMethod="AdsBannerDelete"
         SelectMethod="AdsBannerSelectAll" TypeName="TLLib.AdsBanner" UpdateMethod="AdsBannerUpdate">
         <DeleteParameters>

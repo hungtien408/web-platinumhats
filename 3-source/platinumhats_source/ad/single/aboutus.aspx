@@ -96,7 +96,7 @@
         <img alt="" src="../assets/images/product.png" class="vam" />
         Giới Thiệu
     </h3>
-    <asp:RadAjaxPanel ID="RadAjaxPanel1" runat="server" ClientEvents-OnRequestStart="conditionalPostback">
+    <%--<asp:RadAjaxPanel ID="RadAjaxPanel1" runat="server" ClientEvents-OnRequestStart="conditionalPostback">--%>
         <asp:Panel ID="pnlSearch" DefaultButton="btnSearch" runat="server" Visible="False">
             <h4 class="searchTitle">
                 Tìm kiếm
@@ -691,7 +691,7 @@
                 </TargetControls>
             </asp:TextBoxSetting>
         </asp:RadInputManager>
-    </asp:RadAjaxPanel>
+    <%--</asp:RadAjaxPanel>--%>
     <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="ArticleSelectAll"
         TypeName="TLLib.Article" DeleteMethod="ArticleDelete" UpdateMethod="ArticleUpdate"
         InsertMethod="ArticleInsert">

@@ -214,7 +214,7 @@ public partial class ad_single_partner : System.Web.UI.Page
             var row = itemtype == GridItemType.EditFormItem ? (GridEditFormItem)e.Item : (GridEditFormInsertItem)e.Item;
             var FilePartnerImage = (RadUpload)row.FindControl("FilePartnerImage");
 
-            RadAjaxPanel1.ResponseScripts.Add(string.Format("window['UploadId'] = '{0}';", FilePartnerImage.ClientID));
+            //RadAjaxPanel1.ResponseScripts.Add(string.Format("window['UploadId'] = '{0}';", FilePartnerImage.ClientID));
         }
     }
     #endregion

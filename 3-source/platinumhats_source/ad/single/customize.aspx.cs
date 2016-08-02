@@ -328,8 +328,8 @@ public partial class ad_single_article : System.Web.UI.Page
                 if (!string.IsNullOrEmpty(dv[0]["ArticleCategoryID"].ToString()))
                     ddlCategory.SelectedValue = dv[0]["ArticleCategoryID"].ToString();
             }
-            RadAjaxPanel1.ResponseScripts.Add(string.Format("window['UploadId'] = '{0}';", FileImageName.ClientID));
-            RadAjaxPanel1.ResponseScripts.Add(string.Format("window['UploadId1'] = '{0}';", FileIconName.ClientID));
+            //RadAjaxPanel1.ResponseScripts.Add(string.Format("window['UploadId'] = '{0}';", FileImageName.ClientID));
+            //RadAjaxPanel1.ResponseScripts.Add(string.Format("window['UploadId1'] = '{0}';", FileIconName.ClientID));
         }
     }
 

@@ -375,7 +375,7 @@ public partial class ad_single_product : System.Web.UI.Page
                 ddlManufacturer.SelectedValue = ddlSearchManufacturer.SelectedValue;
                 ddlOrigin.SelectedValue = ddlSearchOrigin.SelectedValue;
             }
-            RadAjaxPanel1.ResponseScripts.Add(string.Format("window['UploadId'] = '{0}';", FileImageName.ClientID));
+            //RadAjaxPanel1.ResponseScripts.Add(string.Format("window['UploadId'] = '{0}';", FileImageName.ClientID));
         }
         else if (e.Item is GridDataItem)
         {
@@ -390,7 +390,7 @@ public partial class ad_single_product : System.Web.UI.Page
 
     protected void RadGrid1_PreRender(object sender, EventArgs e)
     {
-        RadAjaxPanel1.ResponseScripts.Add("$('.rating td').css({padding:0});");
+        //RadAjaxPanel1.ResponseScripts.Add("$('.rating td').css({padding:0});");
     }
 
     protected void RadListView1_ItemCommand(object sender, RadListViewCommandEventArgs e)

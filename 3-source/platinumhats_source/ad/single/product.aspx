@@ -122,7 +122,7 @@
         <img alt="" src="../assets/images/product.png" class="vam" />
         Sản Phẩm
     </h3>
-    <asp:RadAjaxPanel ID="RadAjaxPanel1" runat="server" ClientEvents-OnRequestStart="conditionalPostback">
+    <%--<asp:RadAjaxPanel ID="RadAjaxPanel1" runat="server" ClientEvents-OnRequestStart="conditionalPostback" RestoreOriginalRenderDelegate="False">--%>
         <asp:Panel ID="pnlSearch" DefaultButton="btnSearch" runat="server">
             <h4 class="searchTitle">
                 Tìm kiếm
@@ -878,9 +878,9 @@
                                     <td valign="top">
                                         <div class="sub_box">
                                             <div class="head">
-                                                Ảnh sản phẩm</div>
+                                                Ảnh sản phẩm </div>
                                             <div class="cont">
-                                                <asp:RadAjaxPanel ID="RadAjaxPanel2" runat="server" LoadingPanelID="RadAjaxLoadingPanel1">
+                                                <%--<asp:RadAjaxPanel ID="RadAjaxPanel2" runat="server" LoadingPanelID="RadAjaxLoadingPanel1">--%>
                                                     <asp:RadAsyncUpload ID="FileImageAlbum" runat="server" MultipleFileSelection="Automatic"
                                                         TargetFolder="~/res/product/album/" TemporaryFolder="~/res/TempAsync" Width="100%"
                                                         AllowedFileExtensions="jpg,jpeg,gif,png" Localization-Select="Chọn" Localization-Cancel="Hủy"
@@ -890,7 +890,8 @@
                                                     <asp:RadButton ID="btnUpload" runat="server" Text="Tải lên" ShowPostBackMask="False">
                                                         <Icon PrimaryIconUrl="~/ad/assets/images/up.png" />
                                                     </asp:RadButton>
-                                                    <asp:RadAjaxPanel ID="RadAjaxPanel3" runat="server" LoadingPanelID="RadAjaxLoadingPanel1">
+                                                    <%--<asp:RadAjaxPanel ID="RadAjaxPanel3" runat="server" LoadingPanelID="RadAjaxLoadingPanel1">--%>
+                                                    <div>
                                                         <asp:RadListView runat="server" ID="RadListView1" DataSourceID="OdsProductPhotoAlbum"
                                                             DataKeyNames="ProductImageID" OverrideDataSourceControlSorting="True" OnItemCommand="RadListView1_ItemCommand"
                                                             PageSize="100" Width="100%" Visible='<%# (Container is GridEditFormInsertItem) ? false : true %>'
@@ -1034,8 +1035,9 @@
                                                                 </fieldset>
                                                             </ItemTemplate>
                                                         </asp:RadListView>
-                                                    </asp:RadAjaxPanel>
-                                                </asp:RadAjaxPanel>
+                                                    </div>
+                                                    <%--</asp:RadAjaxPanel>
+                                                </asp:RadAjaxPanel>--%>
                                             </div>
                                         </div>
                                     </td>
@@ -1062,7 +1064,7 @@
             <HeaderContextMenu EnableImageSprites="True" CssClass="GridContextMenu GridContextMenu_Default">
             </HeaderContextMenu>
         </asp:RadGrid>
-    </asp:RadAjaxPanel>
+    <%--</asp:RadAjaxPanel>--%>
     <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="ProductSelectAll"
         TypeName="TLLib.Product" DeleteMethod="ProductDelete" InsertMethod="ProductInsert"
         UpdateMethod="ProductUpdate">
