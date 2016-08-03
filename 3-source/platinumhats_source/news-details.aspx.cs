@@ -36,7 +36,7 @@ public partial class news_details : System.Web.UI.Page
             }
             else
             {
-                strTitle = strMetaTitle = "News";
+                strTitle = strMetaTitle = "In The News";
                 strDescription = "";
                 strMetaDescription = "";
             }
