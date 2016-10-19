@@ -14,8 +14,8 @@
                         runat="server"></asp:Label></span>
                 </div>
                 <div class="head-title">
-                    <h4 class="text-uppercase title-1 font400 cotit">
-                        <asp:Label ID="lblTitle2" runat="server"></asp:Label></h4>
+                    <h1 class="text-uppercase title-1 font400 cotit">
+                        <asp:Label ID="lblTitle2" runat="server"></asp:Label></h1>
                     <%--<div class="node">
                         Previous headwear productions</div>--%>
                 </div>
@@ -63,8 +63,8 @@
                         <asp:ListView ID="lstCustomize" runat="server" DataSourceID="odsCustomize" EnableModelValidation="True">
                             <ItemTemplate>
                                 <div id='<%# "customize" + Eval("ArticleID") %>' class="custom-box">
-                                    <h4 class="custom-name">
-                                        <%# Eval("ArticleTitle")%></h4>
+                                    <h1 class="custom-name">
+                                        <%# Eval("ArticleTitle")%></h1>
                                     <div class="custom-content">
                                         <asp:Label ID="Label1" runat="server" Text='<%# Eval("Content") %>'></asp:Label>
                                     </div>

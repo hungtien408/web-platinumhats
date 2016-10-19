@@ -15,8 +15,8 @@
                     <a class="home" id="A1" href="~/" runat="server">Home</a>&gt;<span>Contact</span>
                 </div>
                 <div class="head-title">
-                    <h4 class="text-uppercase title-1 font400 cotit">
-                        Contact us</h4>
+                    <h1 class="text-uppercase title-1 font400 cotit">
+                        Contact us</h1>
                     <%-- <div class="node">
                         We will respond to all your contacts fastest</div>--%>
                 </div>
@@ -26,8 +26,8 @@
                     <div class="ipadmo-992">
                         <asp:ListView ID="lstFooter" runat="server" DataSourceID="odsFooter" EnableModelValidation="True">
                             <ItemTemplate>
-                                <h4 class="text-uppercase">
-                                    <%# Eval("ArticleTitle")%></h4>
+                                <h1 class="text-uppercase">
+                                    <%# Eval("ArticleTitle")%></h1>
                                 <div class="address-contact">
                                     <p>
                                         <span class="fa fa-map-marker"></span>
@@ -146,8 +146,8 @@
                     <div class="desktop-992">
                         <asp:ListView ID="lstFooter2" runat="server" DataSourceID="odsFooter" EnableModelValidation="True">
                             <ItemTemplate>
-                                <h4 class="text-uppercase">
-                                    <%# Eval("ArticleTitle")%></h4>
+                                <h1 class="text-uppercase">
+                                    <%# Eval("ArticleTitle")%></h1>
                                 <div class="address-contact">
                                     <p>
                                         <span class="fa fa-map-marker"></span>

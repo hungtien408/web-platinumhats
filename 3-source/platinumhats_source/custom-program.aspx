@@ -16,8 +16,8 @@
                         runat="server"></asp:Label></span>
                 </div>
                 <div class="head-title">
-                    <h4 class="text-uppercase title-1 font400 cotit">
-                        <asp:Label ID="lblTitle" runat="server"></asp:Label></h4>
+                    <h1 class="text-uppercase title-1 font400 cotit">
+                        <asp:Label ID="lblTitle" runat="server"></asp:Label></h1>
                     <%--<div class="node">
                         4 easy steps to custom headwear</div>--%>
                 </div>

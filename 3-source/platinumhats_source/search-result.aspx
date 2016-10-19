@@ -14,8 +14,8 @@
                     <a class="home" id="A1" href="~/" runat="server">Home</a>&gt;<span>Product</span>
                 </div>
                 <div class="head-title">
-                    <h4 class="text-uppercase title-1 font400 cotit">
-                        Search Result</h4>
+                    <h1 class="text-uppercase title-1 font400 cotit">
+                        Search Result</h1>
                     <div class="node">
                         Previous headwear productions</div>
                     <div class='<%= ((DataView)odsProduct.Select()).Count == 0 ? "node" : "node hide" %>'>
@@ -36,9 +36,9 @@
                                         <img id="Img1" class="hideo" alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/product/" + Eval("ImageName") : "~/assets/images/product-img-1.jpg" %>'
                                             runat="server" />
                                         <span class="mask-img"></span></a>
-                                    <h4 class="product-name">
+                                    <h1 class="product-name">
                                         <a href="javascitp:void(0);">
-                                            <%# Eval("ProductName") %></a></h4>
+                                            <%# Eval("ProductName") %></a></h1>
                                     <a id="A2" href='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/product/" + Eval("ImageName") : "~/assets/images/product-img-1.jpg" %>'
                                         class="fancybox link-mask" data-fancybox-group="gallery" runat="server">
                                         <%# Eval("ProductName") %></a>

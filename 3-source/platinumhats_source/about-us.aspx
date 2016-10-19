@@ -28,8 +28,8 @@
                         <img alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/article/" + Eval("ImageName") : "~/assets/images/about-co.jpg" %>' runat="server" />
                     </div>--%>
                     <div class="aboutus-content text-center">
-                        <h4 class="text-uppercase title-3">
-                            <%# Eval("ArticleTitle")%></h4>
+                        <h1 class="text-uppercase title-3">
+                            <%# Eval("ArticleTitle")%></h1>
                         <%--<div class="description lineb7">
                             <asp:Label ID="Label1" runat="server" Text='<%# Eval("Content") %>'></asp:Label>
                         </div>--%>

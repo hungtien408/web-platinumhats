@@ -14,8 +14,8 @@
                         runat="server"></asp:Label></span>
                 </div>
                 <div class="head-title">
-                    <h4 class="text-uppercase title-1 font400 cotit">
-                        <asp:Label ID="lblTitle2" runat="server"></asp:Label></h4>
+                    <h1 class="text-uppercase title-1 font400 cotit">
+                        <asp:Label ID="lblTitle2" runat="server"></asp:Label></h1>
                     <%--<div class="node">
                         Previous headwear productions</div>--%>
                 </div>
@@ -61,9 +61,9 @@
                                             <img id="Img1" src='<%# "~/res/product/" + Eval("ImageName") %>' visible='<%# string.IsNullOrEmpty( Eval("ImageName").ToString()) ? false : true %>' runat="server" alt="" />
                                             <span class="mask-img"></span>
                                         </a>
-                                        <h4 class="product-name">
+                                        <h1 class="product-name">
                                             <a href='<%# progressTitle(Eval("ProductName"))  +"-glm-" + Eval("ProductID") + ".aspx" %>'>
-                                                <%# Eval("ProductName")%></a></h4>
+                                                <%# Eval("ProductName")%></a></h1>
                                     </div>
                                 </div>
                             </ItemTemplate>

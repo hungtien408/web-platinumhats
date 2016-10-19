@@ -29,16 +29,16 @@
                     <asp:Label ID="lblArticleTitle" runat="server"></asp:Label>
                 </div>
                 <div class="head-title">
-                    <h4 class="text-uppercase title-1 font400 cotit">
-                        <asp:Label ID="lblTitle" runat="server"></asp:Label></h4>
+                    <h1 class="text-uppercase title-1 font400 cotit">
+                        <asp:Label ID="lblTitle" runat="server"></asp:Label></h1>
                     <div class="node">
                         information activities of the company</div>
                 </div>
             </div>
             <asp:ListView ID="lstNewDetails" runat="server" DataSourceID="odsNewDetails" EnableModelValidation="True">
                 <ItemTemplate>
-                    <h2 class="title-1 text-center titco2 ptb20">
-                        <%# Eval("ArticleTitle") %></h2>
+                    <h1 class="title-1 text-center titco2 ptb20">
+                        <%# Eval("ArticleTitle") %></h1>
                     <div class="date">
                         By Platinum hats -
                         <%# string.Format("{0:dd/MM/yyyy}", Eval("CreateDate"))%></div>
@@ -66,8 +66,8 @@
                             <a href='<%# progressTitle(Eval("ArticleTitle")) + "-tci-" + Eval("ArticleCategoryID") + "-tt-" + Eval("ArticleID") + ".aspx" %>' class="news-img box-img fullbox-img cover-img">
                                 <img alt='<%# Eval("ImageName") %>' src='<%# !string.IsNullOrEmpty(Eval("ImageName").ToString()) ? "~/res/article/" + Eval("ImageName") : "~/assets/images/news-img-1.jpg" %>'
                                             runat="server" /></a>
-                            <h4 class="news-names">
-                                <a href='<%# progressTitle(Eval("ArticleTitle")) + "-tci-" + Eval("ArticleCategoryID") + "-tt-" + Eval("ArticleID") + ".aspx" %>'><%# Eval("ArticleTitle") %></a></h4>
+                            <h1 class="news-names">
+                                <a href='<%# progressTitle(Eval("ArticleTitle")) + "-tci-" + Eval("ArticleCategoryID") + "-tt-" + Eval("ArticleID") + ".aspx" %>'><%# Eval("ArticleTitle") %></a></h1>
                         </div>
                     </div>
                 </ItemTemplate>
