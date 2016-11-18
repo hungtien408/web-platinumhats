@@ -198,9 +198,9 @@
             <div class="wrapper-parent">
                 <div class="container">
                     <div class="head head-tit text-center">
-                        <h1 class="text-uppercase title-2 linec">
+                        <h4 class="text-uppercase title-2 linec">
                             <span>OUR PARTNER </span>
-                        </h1>
+                        </h4>
                     </div>
                     <asp:ListView ID="lstParner" runat="server" DataSourceID="odsParner" EnableModelValidation="True">
                         <ItemTemplate>
