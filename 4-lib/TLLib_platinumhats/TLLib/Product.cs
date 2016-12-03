@@ -348,6 +348,79 @@ namespace TLLib
             }
         }
 
+        public DataTable ProductSelectAll2(
+            string StartRowIndex,
+            string EndRowIndex,
+            string Keyword,
+            string ProductName,
+            string Description,
+            string PriceFrom,
+            string PriceTo,
+            string CategoryID,
+            string ManufacturerID,
+            string OriginID,
+            string Tag,
+            string InStock,
+            string IsHot,
+            string IsNew,
+            string IsBestSeller,
+            string IsSaleOff,
+            string IsShowOnHomePage,
+            string FromDate,
+            string ToDate,
+            string Priority,
+            string IsAvailable,
+            string SortByPriority
+        )
+        {
+            try
+            {
+                var dt = new DataTable();
+                var scon = new SqlConnection(connectionString);
+                var cmd = new SqlCommand("usp_Product_SelectAll2", scon);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@StartRowIndex", string.IsNullOrEmpty(StartRowIndex) ? dbNULL : (object)StartRowIndex);
+                cmd.Parameters.AddWithValue("@EndRowIndex", string.IsNullOrEmpty(EndRowIndex) ? dbNULL : (object)EndRowIndex);
+                cmd.Parameters.AddWithValue("@Keyword", string.IsNullOrEmpty(Keyword) ? dbNULL : (object)Keyword);
+                cmd.Parameters.AddWithValue("@ProductName", string.IsNullOrEmpty(ProductName) ? dbNULL : (object)ProductName.Trim());
+                cmd.Parameters.AddWithValue("@Description", string.IsNullOrEmpty(Description) ? dbNULL : (object)Description.Trim());
+                cmd.Parameters.AddWithValue("@PriceFrom", string.IsNullOrEmpty(PriceFrom) ? dbNULL : (object)PriceFrom);
+                cmd.Parameters.AddWithValue("@PriceTo", string.IsNullOrEmpty(PriceTo) ? dbNULL : (object)PriceTo);
+                cmd.Parameters.AddWithValue("@CategoryID", string.IsNullOrEmpty(CategoryID) ? dbNULL : (object)CategoryID);
+                cmd.Parameters.AddWithValue("@ManufacturerID", string.IsNullOrEmpty(ManufacturerID) ? dbNULL : (object)ManufacturerID);
+                cmd.Parameters.AddWithValue("@OriginID", string.IsNullOrEmpty(OriginID) ? dbNULL : (object)OriginID);
+                cmd.Parameters.AddWithValue("@Tag", string.IsNullOrEmpty(Tag) ? dbNULL : (object)Tag);
+                cmd.Parameters.AddWithValue("@InStock", string.IsNullOrEmpty(InStock) ? dbNULL : (object)InStock);
+                cmd.Parameters.AddWithValue("@IsHot", string.IsNullOrEmpty(IsHot) ? dbNULL : (object)IsHot);
+                cmd.Parameters.AddWithValue("@IsNew", string.IsNullOrEmpty(IsNew) ? dbNULL : (object)IsNew);
+                cmd.Parameters.AddWithValue("@IsBestSeller", string.IsNullOrEmpty(IsBestSeller) ? dbNULL : (object)IsBestSeller);
+                cmd.Parameters.AddWithValue("@IsSaleOff", string.IsNullOrEmpty(IsSaleOff) ? dbNULL : (object)IsSaleOff);
+                cmd.Parameters.AddWithValue("@IsShowOnHomePage", string.IsNullOrEmpty(IsShowOnHomePage) ? dbNULL : (object)IsShowOnHomePage);
+                cmd.Parameters.AddWithValue("@FromDate", string.IsNullOrEmpty(FromDate) ? dbNULL : (object)FromDate);
+                cmd.Parameters.AddWithValue("@ToDate", string.IsNullOrEmpty(ToDate) ? dbNULL : (object)ToDate);
+                cmd.Parameters.AddWithValue("@Priority", string.IsNullOrEmpty(Priority) ? dbNULL : (object)Priority);
+                cmd.Parameters.AddWithValue("@IsAvailable", string.IsNullOrEmpty(IsAvailable) ? dbNULL : (object)IsAvailable);
+                cmd.Parameters.AddWithValue("@SortByPriority", string.IsNullOrEmpty(SortByPriority) ? dbNULL : (object)SortByPriority);
+
+                SqlParameter errorCodeParam = new SqlParameter("@ErrorCode", null);
+                errorCodeParam.Size = 4;
+                errorCodeParam.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(errorCodeParam);
+                var sda = new SqlDataAdapter(cmd);
+                sda.Fill(dt);
+
+                if (errorCodeParam.Value.ToString() != "0")
+                    throw new Exception("Stored Procedure 'usp_Product_SelectAll2' reported the ErrorCode : " + errorCodeParam.Value.ToString());
+
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public DataTable ProductForDisplaySelectAll(
             string StartRowIndex,
             string EndRowIndex,

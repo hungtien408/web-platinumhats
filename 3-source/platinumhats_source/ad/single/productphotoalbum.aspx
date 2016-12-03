@@ -101,7 +101,7 @@
     <asp:RadProgressArea ID="ProgressArea1" runat="server" Culture="vi-VN" DisplayCancelButton="True"
         HeaderText="Đang tải" Skin="Office2007" Style="position: fixed; top: 50% !important;
         left: 50% !important; margin: -93px 0 0 -188px;" />
-    <asp:RadAjaxPanel runat="server" ID="RadAjaxPanel1" ClientEvents-OnRequestStart="conditionalPostback">
+    <asp:RadAjaxPanel runat="server" ID="RadAjaxPanel1" ClientEvents-OnRequestStart="conditionalPostback" RestoreOriginalRenderDelegate="False">
         <asp:Label ID="lblError" ForeColor="Red" runat="server"></asp:Label>
         <asp:RadListView runat="server" ID="RadListView1" DataSourceID="ObjectDataSource1"
             AllowPaging="True" DataKeyNames="ProductImageID" OverrideDataSourceControlSorting="True"

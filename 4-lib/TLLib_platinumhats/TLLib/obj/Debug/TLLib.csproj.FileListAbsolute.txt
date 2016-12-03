@@ -52,3 +52,10 @@ E:\Website\web-platinumhats\4-lib\TLLib_platinumhats\TLLib\bin\Debug\itextsharp.
 E:\Website\web-platinumhats\4-lib\TLLib_platinumhats\TLLib\obj\Debug\TLLib.csprojResolveAssemblyReference.cache
 E:\Website\web-platinumhats\4-lib\TLLib_platinumhats\TLLib\obj\Debug\TLLib.dll
 E:\Website\web-platinumhats\4-lib\TLLib_platinumhats\TLLib\obj\Debug\TLLib.pdb
+E:\Tien\Website\platinumhats\4-lib\TLLib_platinumhats\TLLib\bin\Debug\TLLib.dll
+E:\Tien\Website\platinumhats\4-lib\TLLib_platinumhats\TLLib\bin\Debug\TLLib.pdb
+E:\Tien\Website\platinumhats\4-lib\TLLib_platinumhats\TLLib\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\Tien\Website\platinumhats\4-lib\TLLib_platinumhats\TLLib\bin\Debug\itextsharp.dll
+E:\Tien\Website\platinumhats\4-lib\TLLib_platinumhats\TLLib\obj\Debug\TLLib.csprojResolveAssemblyReference.cache
+E:\Tien\Website\platinumhats\4-lib\TLLib_platinumhats\TLLib\obj\Debug\TLLib.dll
+E:\Tien\Website\platinumhats\4-lib\TLLib_platinumhats\TLLib\obj\Debug\TLLib.pdb

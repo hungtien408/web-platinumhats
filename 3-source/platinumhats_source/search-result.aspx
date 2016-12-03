@@ -45,6 +45,9 @@
                                 </div>
                             </div>
                         </ItemTemplate>
+                        <EmptyDataTemplate>
+                            Not Found
+                        </EmptyDataTemplate>
                         <LayoutTemplate>
                             <div class="wrapper-product">
                                 <div class="row product-tb product-tbpos">
@@ -53,7 +56,7 @@
                             </div>
                         </LayoutTemplate>
                     </asp:ListView>
-                    <asp:ObjectDataSource ID="odsProduct" runat="server" SelectMethod="ProductSelectAll"
+                    <asp:ObjectDataSource ID="odsProduct" runat="server" SelectMethod="ProductSelectAll2"
                         TypeName="TLLib.Product">
                         <SelectParameters>
                             <asp:Parameter Name="StartRowIndex" Type="String" />
