@@ -36,7 +36,7 @@
         width: 160px;
     }
     #menu {
-        padding-right: 110px;
+        padding-right: 130px;
     }
     #menu > li > a {
         font-size: 16px;
@@ -55,7 +55,7 @@
         padding: 10px 20px;
     }
     #header .header-right {
-        width: 110px;
+        /*width: 110px;*/
     }
     .link-search {
         line-height: 80px;

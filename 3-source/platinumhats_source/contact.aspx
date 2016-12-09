@@ -34,6 +34,10 @@
                                         <%# Eval("Tag") %>
                                     </p>
                                     <p>
+                                        <span class="fa fa-map-marker"></span>
+                                        <%# Eval("TagEn") %>
+                                    </p>
+                                    <p>
                                         <span class="fa fa-phone"></span>
                                         <%# Eval("MetaTittle") %></p>
                                     <p>
@@ -152,6 +156,10 @@
                                     <p>
                                         <span class="fa fa-map-marker"></span>
                                         <%# Eval("Tag") %>
+                                    </p>
+                                    <p>
+                                        <span class="fa fa-map-marker"></span>
+                                        <%# Eval("TagEn") %>
                                     </p>
                                     <p>
                                         <span class="fa fa-phone"></span>

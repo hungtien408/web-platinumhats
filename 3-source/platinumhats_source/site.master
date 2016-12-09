@@ -179,8 +179,10 @@
                                 </asp:Panel>
                             </div>
                         </div>
-                        <a href="#" class="link-a fa fa-facebook"></a><a href="#" class="link-a fa fa-google-plus">
-                        </a>
+                        <a href="https://www.instagram.com/platinumhats/" target="_blank" class="link-a fa fa-instagram"></a>
+                        <a href="https://twitter.com/PlatinumHats" target="_blank" class="link-a fa fa-twitter"></a>
+                        <a href="https://www.facebook.com/Platinum-Hats-1829861867271603/" target="_blank" class="link-a fa fa-facebook"></a>
+                        <%--<a href="#" class="link-a fa fa-google-plus"></a>--%>
                     </div>
                     <div class="clr">
                     </div>
@@ -250,6 +252,9 @@
                                 <ItemTemplate>
                                     <li><span class="iconal glyphicon glyphicon-map-marker"></span>
                                         <%# Eval("Tag") %>
+                                    </li>
+                                    <li><span class="iconal glyphicon glyphicon-map-marker"></span>
+                                        <%# Eval("TagEn") %>
                                     </li>
                                     <li><span class="iconal glyphicon glyphicon-phone-alt"></span>
                                         <%# Eval("MetaTittle") %></li>

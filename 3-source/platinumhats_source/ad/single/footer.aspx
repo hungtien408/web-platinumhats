@@ -305,6 +305,7 @@
                     <asp:GridBoundColumn DataField="ArticleTitle" HeaderText="Công Ty" SortExpression="ArticleTitle" />
                     <asp:GridBoundColumn DataField="ArticleCategoryName" HeaderText="Danh mục" SortExpression="ArticleCategoryName" Visible="False" />
                     <asp:GridBoundColumn DataField="Tag" HeaderText="Địa chỉ" SortExpression="Tag" />
+                    <asp:GridBoundColumn DataField="TagEn" HeaderText="Địa chỉ (En)" SortExpression="TagEn" />
                     <asp:GridBoundColumn DataField="MetaTittle" HeaderText="Điện thoại" SortExpression="MetaTittle" />
                     <asp:GridBoundColumn DataField="MetaDescription" HeaderText="Email" SortExpression="MetaDescription" />
                     <asp:GridTemplateColumn DataField="Priority" HeaderStyle-Width="1%" HeaderText="Thứ tự"
@@ -466,6 +467,14 @@
                                 </tr>
                                 <tr>
                                     <td class="left">
+                                        Địa chỉ (En)
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="txtTagEn" runat="server" Width="500px" Text='<%# Bind("TagEn") %>'></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="left">
                                         Điện thoại
                                     </td>
                                     <td>
@@ -594,14 +603,6 @@
                                         <h3>
                                             (Ngôn Ngữ Tiếng Anh)</h3>
                                         <hr />
-                                    </td>
-                                </tr>
-                                <tr class="invisible">
-                                    <td class="left">
-                                        Tag
-                                    </td>
-                                    <td>
-                                        <asp:TextBox ID="txtTagEn" runat="server" Width="500px" Text='<%# Bind("TagEn") %>'></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr class="invisible">
