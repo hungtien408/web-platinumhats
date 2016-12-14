@@ -458,11 +458,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="left">
-                                        Địa chỉ
-                                    </td>
-                                    <td>
-                                        <asp:TextBox ID="txtTag" runat="server" Width="500px" Text='<%# Bind("Tag") %>'></asp:TextBox>
+                                    <td colspan="2">
+                                        <h3>
+                                            Trụ sở chính</h3>
+                                        <hr />
                                     </td>
                                 </tr>
                                 <tr>
@@ -471,6 +470,37 @@
                                     </td>
                                     <td>
                                         <asp:TextBox ID="txtTagEn" runat="server" Width="500px" Text='<%# Bind("TagEn") %>'></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td class="left">
+                                        Điện thoại
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="txtMetaTittleEn" runat="server" Width="500px" Text='<%# Bind("MetaTittleEn") %>'></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="left">
+                                        Email
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="txtMetaDescriptionEn" runat="server" Width="500px" Text='<%# Bind("MetaDescriptionEn") %>'></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <h3>
+                                            Văn phòng Việt Nam</h3>
+                                        <hr />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="left">
+                                        Địa chỉ
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="txtTag" runat="server" Width="500px" Text='<%# Bind("Tag") %>'></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
@@ -603,22 +633,6 @@
                                         <h3>
                                             (Ngôn Ngữ Tiếng Anh)</h3>
                                         <hr />
-                                    </td>
-                                </tr>
-                                <tr class="invisible">
-                                    <td class="left">
-                                        Meta Title
-                                    </td>
-                                    <td>
-                                        <asp:TextBox ID="txtMetaTittleEn" runat="server" Width="500px" Text='<%# Bind("MetaTittleEn") %>'></asp:TextBox>
-                                    </td>
-                                </tr>
-                                <tr class="invisible">
-                                    <td class="left">
-                                        Meta Description
-                                    </td>
-                                    <td>
-                                        <asp:TextBox ID="txtMetaDescriptionEn" runat="server" Width="500px" Text='<%# Bind("MetaDescriptionEn") %>'></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr class="invisible">

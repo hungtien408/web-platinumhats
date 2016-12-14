@@ -29,18 +29,28 @@
                                 <h1 class="text-uppercase">
                                     <%# Eval("ArticleTitle")%></h1>
                                 <div class="address-contact">
-                                    <p>
-                                        <span class="fa fa-map-marker"></span>
-                                        <%# Eval("Tag") %>
-                                    </p>
-                                    <p>
+                                    <h4>Main Office</h4>
+                                    <p class='<%# string.IsNullOrEmpty(Eval("TagEn").ToString()) ? "hidden" : "" %>'>
                                         <span class="fa fa-map-marker"></span>
                                         <%# Eval("TagEn") %>
                                     </p>
-                                    <p>
+                                    <p class='<%# string.IsNullOrEmpty(Eval("MetaTittleEn").ToString()) ? "hidden" : "" %>'>
+                                        <span class="fa fa-phone"></span>
+                                        <%# Eval("MetaTittleEn") %></p>
+                                    <p class='<%# string.IsNullOrEmpty(Eval("MetaDescriptionEn").ToString()) ? "hidden" : "" %>'>
+                                        <span class="fa fa-envelope"></span><a href='<%# "mailto:" + Eval("MetaDescriptionEn")%>'>
+                                            <%# Eval("MetaDescriptionEn")%></a></p>
+                                </div>
+                                <div class="address-contact">
+                                    <h4>Branch Viet Nam</h4>
+                                    <p class='<%# string.IsNullOrEmpty(Eval("Tag").ToString()) ? "hidden" : "" %>'>
+                                        <span class="fa fa-map-marker"></span>
+                                        <%# Eval("Tag") %>
+                                    </p>
+                                    <p class='<%# string.IsNullOrEmpty(Eval("MetaTittle").ToString()) ? "hidden" : "" %>'>
                                         <span class="fa fa-phone"></span>
                                         <%# Eval("MetaTittle") %></p>
-                                    <p>
+                                    <p class='<%# string.IsNullOrEmpty(Eval("MetaDescription").ToString()) ? "hidden" : "" %>'>
                                         <span class="fa fa-envelope"></span><a href='<%# "mailto:" + Eval("MetaDescription")%>'>
                                             <%# Eval("MetaDescription")%></a></p>
                                 </div>
@@ -153,18 +163,28 @@
                                 <h1 class="text-uppercase">
                                     <%# Eval("ArticleTitle")%></h1>
                                 <div class="address-contact">
-                                    <p>
-                                        <span class="fa fa-map-marker"></span>
-                                        <%# Eval("Tag") %>
-                                    </p>
-                                    <p>
+                                    <h4>Main Office</h4>
+                                    <p class='<%# string.IsNullOrEmpty(Eval("TagEn").ToString()) ? "hidden" : "" %>'>
                                         <span class="fa fa-map-marker"></span>
                                         <%# Eval("TagEn") %>
                                     </p>
-                                    <p>
+                                    <p class='<%# string.IsNullOrEmpty(Eval("MetaTittleEn").ToString()) ? "hidden" : "" %>'>
+                                        <span class="fa fa-phone"></span>
+                                        <%# Eval("MetaTittleEn") %></p>
+                                    <p class='<%# string.IsNullOrEmpty(Eval("MetaDescriptionEn").ToString()) ? "hidden" : "" %>'>
+                                        <span class="fa fa-envelope"></span><a href='<%# "mailto:" + Eval("MetaDescriptionEn")%>'>
+                                            <%# Eval("MetaDescriptionEn")%></a></p>
+                                </div>
+                                <div class="address-contact">
+                                    <h4>Branch Viet Nam</h4>
+                                    <p class='<%# string.IsNullOrEmpty(Eval("Tag").ToString()) ? "hidden" : "" %>'>
+                                        <span class="fa fa-map-marker"></span>
+                                        <%# Eval("Tag") %>
+                                    </p>
+                                    <p class='<%# string.IsNullOrEmpty(Eval("MetaTittle").ToString()) ? "hidden" : "" %>'>
                                         <span class="fa fa-phone"></span>
                                         <%# Eval("MetaTittle") %></p>
-                                    <p>
+                                    <p class='<%# string.IsNullOrEmpty(Eval("MetaDescription").ToString()) ? "hidden" : "" %>'>
                                         <span class="fa fa-envelope"></span><a href='<%# "mailto:" + Eval("MetaDescription")%>'>
                                             <%# Eval("MetaDescription")%></a></p>
                                 </div>

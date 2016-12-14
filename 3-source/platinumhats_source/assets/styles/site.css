@@ -715,7 +715,8 @@ body .mobilep-right {
     position: relative;
     overflow: hidden;
     padding: 25px 0;
-    margin-bottom: 40px;
+    /*margin-bottom: 40px;*/
+    margin-bottom: 10px;
     width: 100%;
     z-index: 1;
 }
@@ -992,8 +993,8 @@ body .mobilep-right {
         display: block;
         float: left;
         /*width: 157px;*/
-        width: 220px;
-        height: 157px;
+        width: 280px;
+        height: 162px;
     }
 .about-img img {
     display: block;
